@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "left_ok.png",
+      "filename" : "cursol_0_ok.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "left_ok-1.png",
+      "filename" : "cursol_0_ok-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "left_ok-2.png",
+      "filename" : "cursol_0_ok-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

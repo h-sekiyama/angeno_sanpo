@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "right_ok.png",
+      "filename" : "cursol_4_ok.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "right_ok-1.png",
+      "filename" : "cursol_4_ok-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "right_ok-2.png",
+      "filename" : "cursol_4_ok-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

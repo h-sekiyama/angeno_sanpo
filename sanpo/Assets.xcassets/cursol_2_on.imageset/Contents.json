@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "up_on.png",
+      "filename" : "cursol_3_on.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "up_on-1.png",
+      "filename" : "cursol_3_on-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "up_on-2.png",
+      "filename" : "cursol_3_on-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
