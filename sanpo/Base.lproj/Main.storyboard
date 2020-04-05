@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="sanpo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfh-0m-m9S">
+                                <rect key="frame" x="150.5" y="704" width="113" height="79"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="56"/>
+                                <state key="normal" title="選ぶ"/>
+                                <connections>
+                                    <action selector="checkButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NBs-wb-s5y"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cursol_0_off" translatesAutoresizingMaskIntoConstraints="NO" id="dc9-eb-1Qr" userLabel="left">
+                                <rect key="frame" x="10" y="408" width="80" height="80"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="FkL-dK-cu5"/>
+                                    <constraint firstAttribute="height" constant="80" id="cM8-qg-lhW"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="voB-8J-7YW" appends="YES" id="9kQ-to-QWZ"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cursol_1_off" translatesAutoresizingMaskIntoConstraints="NO" id="hfi-Sw-zsy" userLabel="left_up">
+                                <rect key="frame" x="90" y="408" width="80" height="80"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="1NS-Ev-yU7"/>
+                                    <constraint firstAttribute="height" constant="80" id="m91-TQ-XqS"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="UD7-ve-Qiz" appends="YES" id="tfi-dG-KkN"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cursol_2_off" translatesAutoresizingMaskIntoConstraints="NO" id="JWa-WW-nwm" userLabel="up">
+                                <rect key="frame" x="170" y="408" width="80" height="80"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="aRe-yJ-woq"/>
+                                    <constraint firstAttribute="height" constant="80" id="iIy-hf-Lro"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="pqs-NQ-Ftz" appends="YES" id="oG1-8d-Ea2"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cursol_3_off" translatesAutoresizingMaskIntoConstraints="NO" id="gPi-d5-ng3" userLabel="right_up">
+                                <rect key="frame" x="250" y="408" width="80" height="80"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="AEk-qF-Kec"/>
+                                    <constraint firstAttribute="height" constant="80" id="adh-m9-yv5"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="B1p-sa-Fs2" appends="YES" id="stA-Zz-yXV"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cursol_4_off" translatesAutoresizingMaskIntoConstraints="NO" id="4WB-EX-EXM" userLabel="right">
+                                <rect key="frame" x="330" y="408" width="80" height="80"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="UsL-3M-jnb"/>
+                                    <constraint firstAttribute="height" constant="80" id="dSV-ih-a29"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="r8l-hg-Oex" appends="YES" id="dda-9c-vNw"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="進む方向を決めるにゃ！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hi-rG-bX4">
+                                <rect key="frame" x="111.5" y="184" width="191" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4WB-EX-EXM" firstAttribute="leading" secondItem="gPi-d5-ng3" secondAttribute="leading" constant="80" id="0YV-ia-iE2"/>
+                            <constraint firstItem="0hi-rG-bX4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="1Fb-2G-Q65"/>
+                            <constraint firstItem="4WB-EX-EXM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9gd-jk-YVQ"/>
+                            <constraint firstItem="gPi-d5-ng3" firstAttribute="leading" secondItem="JWa-WW-nwm" secondAttribute="leading" constant="80" id="9vT-Qk-L3b"/>
+                            <constraint firstItem="dc9-eb-1Qr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BNv-iA-IOI"/>
+                            <constraint firstItem="JWa-WW-nwm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DQ3-Rv-bpf"/>
+                            <constraint firstItem="hfi-Sw-zsy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="K4q-ZC-RCa"/>
+                            <constraint firstItem="xfh-0m-m9S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SUw-WY-Jw5"/>
+                            <constraint firstItem="JWa-WW-nwm" firstAttribute="leading" secondItem="hfi-Sw-zsy" secondAttribute="leading" constant="80" id="Tc2-ea-mU5"/>
+                            <constraint firstItem="gPi-d5-ng3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="foX-rW-L90"/>
+                            <constraint firstItem="hfi-Sw-zsy" firstAttribute="leading" secondItem="dc9-eb-1Qr" secondAttribute="leading" constant="80" id="jIt-cA-azt"/>
+                            <constraint firstItem="dc9-eb-1Qr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="jXc-05-JSD"/>
+                            <constraint firstItem="0hi-rG-bX4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qqI-Cw-wOh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xfh-0m-m9S" secondAttribute="bottom" constant="79" id="srH-co-PvE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="assistText" destination="0hi-rG-bX4" id="Mfp-i1-oo0"/>
+                        <outlet property="cursol0ImageView" destination="dc9-eb-1Qr" id="3eH-wI-FWT"/>
+                        <outlet property="cursol1ImageView" destination="hfi-Sw-zsy" id="cQa-7s-YG6"/>
+                        <outlet property="cursol2ImageView" destination="JWa-WW-nwm" id="mg1-Fh-IOv"/>
+                        <outlet property="cursol3ImageView" destination="gPi-d5-ng3" id="xXz-xJ-Oyr"/>
+                        <outlet property="cursol4ImageView" destination="4WB-EX-EXM" id="Jzr-Hr-NgR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="voB-8J-7YW" userLabel="leftTap">
+                    <connections>
+                        <action selector="leftTap:" destination="BYZ-38-t0r" id="qRQ-JO-TeK"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="UD7-ve-Qiz" userLabel="leftUpTap">
+                    <connections>
+                        <action selector="leftUpTap:" destination="BYZ-38-t0r" id="ykx-lM-que"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="pqs-NQ-Ftz" userLabel="upTap">
+                    <connections>
+                        <action selector="upTap:" destination="BYZ-38-t0r" id="jLp-12-VvN"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="B1p-sa-Fs2" userLabel="rightUpTap">
+                    <connections>
+                        <action selector="rightUpTap:" destination="BYZ-38-t0r" id="gDT-ZZ-zRD"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="r8l-hg-Oex" userLabel="rightUpTap">
+                    <connections>
+                        <action selector="rightTap:" destination="BYZ-38-t0r" id="TMF-A2-D8g"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cursol_0_off" width="100" height="100"/>
+        <image name="cursol_1_off" width="100" height="100"/>
+        <image name="cursol_2_off" width="100" height="100"/>
+        <image name="cursol_3_off" width="100" height="100"/>
+        <image name="cursol_4_off" width="100" height="100"/>
+    </resources>
+</document>
