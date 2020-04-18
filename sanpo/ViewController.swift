@@ -9,7 +9,7 @@ class ViewController: UIViewController {
         case ok     // 確定
     }
     
-    var buttonStatus: [ButtonStatus] = [.off, .off, .off, .off, .off]
+    var buttonStatus: [Int: ButtonStatus] = [0: .off, 1: .off, 2: .off, 3: .off, 4: .off]
     var cursolImages: [UIImageView] = []
     
     // 左ボタン
@@ -84,17 +84,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var assistText: UILabel!
     
     @IBAction func checkButton(_ sender: Any) {
-        if (!buttonStatus.contains(ButtonStatus.on)) {
-            assistText.text = "まずは矢印をタップしてアクティブにするにゃ！"
+        // 矢印が一つもアクティブになってないと押せない
+        if (buttonStatus.filter({$0.value == ButtonStatus.on}).count == 0) {
+            assistText.text = "まずは矢印をタップするにゃ！"
             return
         }
-        while !buttonStatus.contains(ButtonStatus.ok) {
-            let buttonNumber = Int.random(in: 0 ..< 5)
-            if (buttonStatus[buttonNumber] == ButtonStatus.on) {
-                cursolImages[buttonNumber].image = UIImage(named: "cursol_\(buttonNumber)_ok")!
-                buttonStatus[buttonNumber] = ButtonStatus.ok
-                assistText.text = "進む方向を決めるにゃ！"
-            }
+        // 既に確定してる矢印がある場合はそれを一旦候補に戻す
+        let okCursol = buttonStatus.filter({$0.value == ButtonStatus.ok})
+        if (okCursol.count != 0) {
+            let okKeyIndex = Array(okCursol.keys)[0]
+            cursolImages[okKeyIndex].image = UIImage(named: "cursol_\(okKeyIndex)_on")!
+            buttonStatus[okKeyIndex] = ButtonStatus.on
         }
+//        // アクティブになってる矢印の中から候補となる配列を生成
+        let onCursol = buttonStatus.filter({$0.value == ButtonStatus.on})
+        let onKeys = Array(onCursol.keys)
+        let okCursolIndex = onKeys[Int(arc4random()) % onKeys.count]
+        cursolImages[okCursolIndex].image = UIImage(named: "cursol_\(okCursolIndex)_ok")!
+        buttonStatus[okCursolIndex] = ButtonStatus.ok
+        assistText.text = "進む方向を決めるにゃ！"
+    
     }
 }
