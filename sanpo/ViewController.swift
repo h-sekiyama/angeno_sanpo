@@ -1,4 +1,5 @@
 import UIKit
+import CoreMotion
 
 class ViewController: UIViewController {
 
@@ -72,6 +73,17 @@ class ViewController: UIViewController {
         }
     }
     
+    // 歩数テキスト
+    @IBOutlet weak var stepCount: UILabel!
+    
+    var pedometer: CMPedometer!
+    
+    //  インスタンスの生成
+    let userDefaults = UserDefaults.standard
+    
+    // 散歩数記録変数
+    var nowStepCount: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -80,6 +92,45 @@ class ViewController: UIViewController {
         cursolImages.append(cursol2ImageView)
         cursolImages.append(cursol3ImageView)
         cursolImages.append(cursol4ImageView)
+        
+        pedometer = CMPedometer()
+
+        // always
+        pedometer.startUpdates(from: Date()) { data, error in
+            guard let data = data else { return }
+            DispatchQueue.main.async {
+                self.stepCount.text = "いま\(data.numberOfSteps)歩"
+                if (self.nowStepCount < data.numberOfSteps.intValue) {
+                    self.saveSanpoStepCount(stepCount: data.numberOfSteps.intValue)
+                }
+            }
+        }
+        
+        nowStepCount = readSanpStepCount()
+    }
+    
+    // userDefaultから歩数取得
+    func readSanpStepCount() -> Int {
+       // Keyを指定して読み込み
+        let stepCount: Int = userDefaults.object(forKey: "SanpoStepCount") as? Int ?? 0
+        return stepCount
+    }
+    
+    // userDefaultに歩数記録
+    func saveSanpoStepCount(stepCount: Int){
+       // Keyを指定して保存
+       userDefaults.set(stepCount, forKey: "SanpoStepCount")
+    }
+    
+    // 散歩やめるボタンタップ
+    @IBAction func stopSanpo(_ sender: Any) {
+        pedometer.stopUpdates()
+//        self.dismiss(animated: true, completion: nil)
+        let startViewController = UIStoryboard(name: "Start", bundle: nil).instantiateViewController(withIdentifier: "start") as UIViewController
+        
+        startViewController.modalPresentationStyle = .fullScreen
+        // Viewの移動する.
+        self.present(startViewController, animated: true, completion: nil)
     }
     
     @IBOutlet weak var assistText: UILabel!
@@ -87,7 +138,7 @@ class ViewController: UIViewController {
     @IBAction func checkButton(_ sender: Any) {
         // 矢印が一つもアクティブになってないと押せない
         if (buttonStatus.filter({$0.value == ButtonStatus.on}).count == 0) {
-            assistText.text = "まずは矢印をタップするにゃ！"
+            assistText.text = "分かれ道を矢印で教えるにゃ！"
             return
         }
         // 既に確定してる矢印がある場合はそれを一旦候補に戻す
@@ -103,7 +154,7 @@ class ViewController: UIViewController {
         let okCursolIndex = onKeys[Int(arc4random()) % onKeys.count]
         cursolImages[okCursolIndex].image = UIImage(named: "cursol_\(okCursolIndex)_ok")!
         buttonStatus[okCursolIndex] = ButtonStatus.ok
-        assistText.text = "進む方向を決めるにゃ！"
+        assistText.text = "どんどん行くにゃ！"
     
     }
 }
