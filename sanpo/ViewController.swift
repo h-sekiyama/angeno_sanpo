@@ -81,6 +81,7 @@ class ViewController: UIViewController {
         cursolImages.append(cursol3ImageView)
         cursolImages.append(cursol4ImageView)
     }
+    
     @IBOutlet weak var assistText: UILabel!
     
     @IBAction func checkButton(_ sender: Any) {
