@@ -75,8 +75,11 @@ class ViewController: UIViewController {
     // 歩数管理クラス
     let stepCountClass = StepCountClass()
     
-    // 歩数テキスト
+    // 今の歩数テキスト
     @IBOutlet weak var stepCount: UILabel!
+    
+    // 累計歩数テキスト
+    @IBOutlet weak var totalStepCount: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,7 +90,7 @@ class ViewController: UIViewController {
         cursolImages.append(cursol3ImageView)
         cursolImages.append(cursol4ImageView)
         
-        stepCountClass.startStepCount(stepCount: stepCount)
+        stepCountClass.startStepCount(stepCountLabel: stepCount, totalStepCountLabel: totalStepCount)
     }
     
     // 散歩やめるボタンタップ

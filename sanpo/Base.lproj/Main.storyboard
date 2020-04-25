@@ -106,6 +106,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="累計0歩" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6J-NZ-WKv">
+                                <rect key="frame" x="317.66666666666669" y="51" width="62.333333333333314" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.60784313725490191" green="0.87450980392156863" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -116,10 +122,13 @@
                             <constraint firstItem="gPi-d5-ng3" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.2" id="OvJ-go-cKG"/>
                             <constraint firstItem="JWa-WW-nwm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q54-77-fbn"/>
                             <constraint firstItem="xfh-0m-m9S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SUw-WY-Jw5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N6J-NZ-WKv" secondAttribute="trailing" constant="34" id="Sc1-ZQ-qd0"/>
                             <constraint firstAttribute="bottom" secondItem="Q6a-Pf-sRL" secondAttribute="bottom" constant="-200" id="TL7-z0-xN2"/>
                             <constraint firstItem="gPi-d5-ng3" firstAttribute="leading" secondItem="JWa-WW-nwm" secondAttribute="trailing" id="WVg-XV-ygo"/>
                             <constraint firstItem="hfi-Sw-zsy" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.2" priority="900" id="X4i-7q-BvX"/>
                             <constraint firstItem="Q6a-Pf-sRL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YEq-4F-Scf"/>
+                            <constraint firstItem="hWP-dO-zJh" firstAttribute="top" secondItem="N6J-NZ-WKv" secondAttribute="bottom" constant="28" id="YjV-4f-j3O"/>
+                            <constraint firstItem="N6J-NZ-WKv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="ahJ-9i-F6g"/>
                             <constraint firstItem="gPi-d5-ng3" firstAttribute="top" secondItem="0hi-rG-bX4" secondAttribute="bottom" constant="70" id="cFB-b1-3iE"/>
                             <constraint firstItem="0hi-rG-bX4" firstAttribute="top" secondItem="hWP-dO-zJh" secondAttribute="bottom" constant="90" id="eRw-Op-3jd"/>
                             <constraint firstItem="hWP-dO-zJh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fJC-pl-Ht8"/>
@@ -146,6 +155,7 @@
                         <outlet property="cursol3ImageView" destination="gPi-d5-ng3" id="xXz-xJ-Oyr"/>
                         <outlet property="cursol4ImageView" destination="4WB-EX-EXM" id="Jzr-Hr-NgR"/>
                         <outlet property="stepCount" destination="hWP-dO-zJh" id="smn-Dz-zvF"/>
+                        <outlet property="totalStepCount" destination="N6J-NZ-WKv" id="flS-3J-6sw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

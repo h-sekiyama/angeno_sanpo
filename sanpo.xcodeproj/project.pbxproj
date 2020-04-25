@@ -11,6 +11,7 @@
 		3E6A0B312453158200D12F25 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A0B302453158200D12F25 /* StartViewController.swift */; };
 		3E6A0B342453211000D12F25 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6A0B332453211000D12F25 /* CoreMotion.framework */; };
 		3E6F91DE24540D3400464924 /* StepCountClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6F91DD24540D3400464924 /* StepCountClass.swift */; };
+		3E6F91E22454382D00464924 /* StepBoarder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6F91E12454382D00464924 /* StepBoarder.swift */; };
 		3E732F5F2439A883003DB97A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E732F5E2439A883003DB97A /* AppDelegate.swift */; };
 		3E732F612439A883003DB97A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E732F602439A883003DB97A /* SceneDelegate.swift */; };
 		3E732F632439A883003DB97A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E732F622439A883003DB97A /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 		3E6A0B302453158200D12F25 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		3E6A0B332453211000D12F25 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		3E6F91DD24540D3400464924 /* StepCountClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCountClass.swift; sourceTree = "<group>"; };
+		3E6F91E12454382D00464924 /* StepBoarder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepBoarder.swift; sourceTree = "<group>"; };
 		3E732F5B2439A883003DB97A /* sanpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sanpo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E732F5E2439A883003DB97A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E732F602439A883003DB97A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				3E732F642439A883003DB97A /* Main.storyboard */,
 				3E732F622439A883003DB97A /* ViewController.swift */,
 				3E6F91DD24540D3400464924 /* StepCountClass.swift */,
+				3E6F91E12454382D00464924 /* StepBoarder.swift */,
 			);
 			path = sanpo;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				3E732F632439A883003DB97A /* ViewController.swift in Sources */,
 				3E6A0B312453158200D12F25 /* StartViewController.swift in Sources */,
 				3E732F5F2439A883003DB97A /* AppDelegate.swift in Sources */,
+				3E6F91E22454382D00464924 /* StepBoarder.swift in Sources */,
 				3E6F91DE24540D3400464924 /* StepCountClass.swift in Sources */,
 				3E732F612439A883003DB97A /* SceneDelegate.swift in Sources */,
 			);
