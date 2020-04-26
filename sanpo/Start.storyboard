@@ -178,7 +178,7 @@
                                         <attributedString key="attributedText">
                                             <fragment content="猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明">
                                                 <attributes>
-                                                    <font key="NSFont" size="17" name=".HiraKakuInterface-W3"/>
+                                                    <font key="NSFont" metaFont="system" size="17"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -190,7 +190,7 @@
                                         <attributedString key="attributedText">
                                             <fragment content="猫の名前">
                                                 <attributes>
-                                                    <font key="NSFont" size="24" name=".HiraKakuInterface-W3"/>
+                                                    <font key="NSFont" metaFont="system" size="24"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
