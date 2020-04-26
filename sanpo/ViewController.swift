@@ -120,13 +120,39 @@ class ViewController: UIViewController {
             cursolImages[okKeyIndex].image = UIImage(named: "cursol_\(okKeyIndex)_on")!
             buttonStatus[okKeyIndex] = ButtonStatus.on
         }
-//        // アクティブになってる矢印の中から候補となる配列を生成
+        // アクティブになってる矢印の中から候補となる配列を生成
         let onCursol = buttonStatus.filter({$0.value == ButtonStatus.on})
         let onKeys = Array(onCursol.keys)
         let okCursolIndex = onKeys[Int(arc4random()) % onKeys.count]
         cursolImages[okCursolIndex].image = UIImage(named: "cursol_\(okCursolIndex)_ok")!
         buttonStatus[okCursolIndex] = ButtonStatus.ok
+        vibrated(vibrated: true, view: cursolImages[okCursolIndex])
         assistText.text = "どんどん行くにゃ！"
+    }
     
+    // 矢印を震わせる処理
+    func degreesToRadians(degrees: Float) -> Float {
+        return degrees * Float(M_PI) / 180.0
+    }
+
+    func vibrated(vibrated:Bool, view: UIView) {
+        if vibrated {
+            var animation: CABasicAnimation
+            animation = CABasicAnimation(keyPath: "transform.rotation")
+            animation.duration = 0.15
+            animation.fromValue = degreesToRadians(degrees: 5.0)
+            animation.toValue = degreesToRadians(degrees: -5.0)
+            animation.repeatCount = 5
+            animation.autoreverses = false
+            view.layer .add(animation, forKey: "VibrateAnimationKey")
+        }
+        else {
+            view.layer.removeAnimation(forKey: "VibrateAnimationKey")
+        }
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 }

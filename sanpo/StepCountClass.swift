@@ -30,31 +30,60 @@ class StepCountClass {
                 if (self.maxStepCount < data.numberOfSteps.intValue) {
                     self.saveSanpoStepCount(stepCount: data.numberOfSteps.intValue)
                 }
-                self.totalStepCount += data.numberOfSteps.intValue
-                totalStepCountLabel.text = "累計\(self.totalStepCount)歩"
-                self.saveSanpoTotalStepCount(totalStepCount: self.totalStepCount)
+                totalStepCountLabel.text = "累計\(data.numberOfSteps.intValue + self.totalStepCount)歩"
+                self.saveSanpoTotalStepCount(totalStepCount: data.numberOfSteps.intValue + self.totalStepCount)
                 
                 // 累計歩数に応じて猫が着いてきたメッセージを送信
-                if case StepBoarder.boarder_01.rawValue ... StepBoarder.boarder_02.rawValue = self.totalStepCount {
-                    self.sendNotification(catName: StepBoarderCat.boarder_01.rawValue)
-                } else if case StepBoarder.boarder_02.rawValue ... StepBoarder.boarder_03.rawValue = self.totalStepCount {
-                    self.sendNotification(catName: StepBoarderCat.boarder_02.rawValue)
-                }else if case StepBoarder.boarder_03.rawValue ... StepBoarder.boarder_03.rawValue = self.totalStepCount {
-                    self.sendNotification(catName: StepBoarderCat.boarder_03.rawValue)
-                }else if case StepBoarder.boarder_04.rawValue ... StepBoarder.boarder_04.rawValue = self.totalStepCount {
-                    self.sendNotification(catName: StepBoarderCat.boarder_04.rawValue)
-                }else if case StepBoarder.boarder_05.rawValue ... StepBoarder.boarder_05.rawValue = self.totalStepCount {
-                    self.sendNotification(catName: StepBoarderCat.boarder_05.rawValue)
-                }else if case StepBoarder.boarder_06.rawValue ... StepBoarder.boarder_06.rawValue = self.totalStepCount {
-                    self.sendNotification(catName: StepBoarderCat.boarder_06.rawValue)
-                }else if case StepBoarder.boarder_07.rawValue ... StepBoarder.boarder_07.rawValue = self.totalStepCount {
-                    self.sendNotification(catName: StepBoarderCat.boarder_07.rawValue)
-                }else if case StepBoarder.boarder_08.rawValue ... StepBoarder.boarder_08.rawValue = self.totalStepCount {
-                    self.sendNotification(catName: StepBoarderCat.boarder_08.rawValue)
-                }else if case StepBoarder.boarder_09.rawValue ... StepBoarder.boarder_09.rawValue = self.totalStepCount {
-                    self.sendNotification(catName: StepBoarderCat.boarder_09.rawValue)
-                }else if case StepBoarder.boarder_10.rawValue ... StepBoarder.boarder_10.rawValue = self.totalStepCount {
-                    self.sendNotification(catName: StepBoarderCat.boarder_10.rawValue)
+                if case StepBoarder.boarder_01.rawValue ... StepBoarder.boarder_02.rawValue = (data.numberOfSteps.intValue + self.totalStepCount) {
+                    if (self.readNotificationFlag(stepBoarder: 1)) {
+                        self.sendNotification(catName: StepBoarderCat.boarder_01.rawValue)
+                        self.saveNotificationFlag(stepBoarder: 1)
+                    }
+                } else if case StepBoarder.boarder_02.rawValue ... StepBoarder.boarder_03.rawValue = (data.numberOfSteps.intValue + self.totalStepCount) {
+                    if (self.readNotificationFlag(stepBoarder: 2)) {
+                        self.sendNotification(catName: StepBoarderCat.boarder_02.rawValue)
+                        self.saveNotificationFlag(stepBoarder: 2)
+                    }
+                } else if case StepBoarder.boarder_03.rawValue ... StepBoarder.boarder_03.rawValue = (data.numberOfSteps.intValue + self.totalStepCount) {
+                    if (self.readNotificationFlag(stepBoarder: 3)) {
+                        self.sendNotification(catName: StepBoarderCat.boarder_03.rawValue)
+                        self.saveNotificationFlag(stepBoarder: 3)
+                    }
+                } else if case StepBoarder.boarder_04.rawValue ... StepBoarder.boarder_04.rawValue = (data.numberOfSteps.intValue + self.totalStepCount) {
+                    if (self.readNotificationFlag(stepBoarder: 4)) {
+                        self.sendNotification(catName: StepBoarderCat.boarder_04.rawValue)
+                        self.saveNotificationFlag(stepBoarder: 4)
+                    }
+                } else if case StepBoarder.boarder_05.rawValue ... StepBoarder.boarder_05.rawValue = (data.numberOfSteps.intValue + self.totalStepCount) {
+                    if (self.readNotificationFlag(stepBoarder: 5)) {
+                        self.sendNotification(catName: StepBoarderCat.boarder_05.rawValue)
+                        self.saveNotificationFlag(stepBoarder: 5)
+                    }
+                } else if case StepBoarder.boarder_06.rawValue ... StepBoarder.boarder_06.rawValue = (data.numberOfSteps.intValue + self.totalStepCount) {
+                    if (self.readNotificationFlag(stepBoarder: 6)) {
+                        self.sendNotification(catName: StepBoarderCat.boarder_06.rawValue)
+                        self.saveNotificationFlag(stepBoarder: 6)
+                    }
+                } else if case StepBoarder.boarder_07.rawValue ... StepBoarder.boarder_07.rawValue = (data.numberOfSteps.intValue + self.totalStepCount) {
+                    if (self.readNotificationFlag(stepBoarder: 7)) {
+                        self.sendNotification(catName: StepBoarderCat.boarder_07.rawValue)
+                        self.saveNotificationFlag(stepBoarder: 7)
+                    }
+                } else if case StepBoarder.boarder_08.rawValue ... StepBoarder.boarder_08.rawValue = (data.numberOfSteps.intValue + self.totalStepCount) {
+                    if (self.readNotificationFlag(stepBoarder: 8)) {
+                        self.sendNotification(catName: StepBoarderCat.boarder_08.rawValue)
+                        self.saveNotificationFlag(stepBoarder: 8)
+                    }
+                } else if case StepBoarder.boarder_09.rawValue ... StepBoarder.boarder_09.rawValue = (data.numberOfSteps.intValue + self.totalStepCount) {
+                    if (self.readNotificationFlag(stepBoarder: 9)) {
+                        self.sendNotification(catName: StepBoarderCat.boarder_09.rawValue)
+                        self.saveNotificationFlag(stepBoarder: 9)
+                    }
+                } else if case StepBoarder.boarder_10.rawValue ... StepBoarder.boarder_10.rawValue = (data.numberOfSteps.intValue + self.totalStepCount) {
+                    if (self.readNotificationFlag(stepBoarder: 10)) {
+                        self.sendNotification(catName: StepBoarderCat.boarder_10.rawValue)
+                        self.saveNotificationFlag(stepBoarder: 10)
+                    }
                 }
             }
         }
@@ -67,6 +96,12 @@ class StepCountClass {
         return stepCount
     }
     
+    // userDefaultに今の歩数記録
+    func saveSanpoStepCount(stepCount: Int){
+       // Keyを指定して保存
+       userDefaults.set(stepCount, forKey: "SanpoStepCount")
+    }
+    
     // userDefaultから累計の歩数取得
     func readTotalSanpStepCount() -> Int {
        // Keyを指定して読み込み
@@ -74,16 +109,23 @@ class StepCountClass {
         return totalStepCount
     }
     
-    // userDefaultに今の歩数記録
-    func saveSanpoStepCount(stepCount: Int){
-       // Keyを指定して保存
-       userDefaults.set(stepCount, forKey: "SanpoStepCount")
-    }
-    
     // userDefaultに累計の歩数記録
     func saveSanpoTotalStepCount(totalStepCount: Int){
        // Keyを指定して保存
        userDefaults.set(totalStepCount, forKey: "SanpoTotalStepCount")
+    }
+    
+    // userDefaultから通知表示済みフラグ取得
+    func readNotificationFlag(stepBoarder: Int) -> Bool {
+       // Keyを指定して読み込み
+        let sendNotificationFlag: Bool = userDefaults.object(forKey: "SanpoNotification_\(stepBoarder)") as? Bool ?? true
+        return sendNotificationFlag
+    }
+    
+    // userDefaultから通知表示済みフラグ記録
+    func saveNotificationFlag(stepBoarder: Int){
+       // Keyを指定して保存
+       userDefaults.set(false, forKey: "SanpoNotification_\(stepBoarder)")
     }
     
     func stopSanpo() {

@@ -1,14 +1,14 @@
 public enum StepBoarder: Int {
     case boarder_01 = 10
-    case boarder_02 = 50
-    case boarder_03 = 100
-    case boarder_04 = 150
-    case boarder_05 = 200
-    case boarder_06 = 250
-    case boarder_07 = 300
-    case boarder_08 = 350
-    case boarder_09 = 400
-    case boarder_10 = 500
+    case boarder_02 = 20
+    case boarder_03 = 30
+    case boarder_04 = 40
+    case boarder_05 = 50
+    case boarder_06 = 60
+    case boarder_07 = 70
+    case boarder_08 = 80
+    case boarder_09 = 90
+    case boarder_10 = 100
 }
 
 public enum StepBoarderCat: String {
