@@ -130,11 +130,12 @@ class ViewController: UIViewController {
         assistText.text = "どんどん行くにゃ！"
     }
     
-    // 矢印を震わせる処理
+    // 回転数制御
     func degreesToRadians(degrees: Float) -> Float {
         return degrees * Float(M_PI) / 180.0
     }
 
+    // 矢印を震わせる処理
     func vibrated(vibrated:Bool, view: UIView) {
         if vibrated {
             var animation: CABasicAnimation

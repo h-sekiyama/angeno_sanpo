@@ -23,16 +23,88 @@ class StartViewController: UIViewController {
     @IBOutlet weak var totalStepCountLabel: UILabel!
     
     // 各種猫画像
-    @IBOutlet weak var cat01: UIImageView!
-    @IBOutlet weak var cat02: UIImageView!
-    @IBOutlet weak var cat03: UIImageView!
-    @IBOutlet weak var cat04: UIImageView!
-    @IBOutlet weak var cat05: UIImageView!
-    @IBOutlet weak var cat06: UIImageView!
-    @IBOutlet weak var cat07: UIImageView!
-    @IBOutlet weak var cat08: UIImageView!
-    @IBOutlet weak var cat09: UIImageView!
-    @IBOutlet weak var cat10: UIImageView!
+//    @IBOutlet weak var cat01: UIImageView!
+    @IBOutlet weak var cat01: UIButton!
+    @IBAction func cat01(_ sender: Any) {
+        let storyboard: UIStoryboard = self.storyboard!
+        let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
+        modalView.catName = "ほげほげ"
+        modalView.catDetail = "ふがふが"
+        self.present(modalView, animated: true, completion: nil)
+    }
+    @IBOutlet weak var cat02: UIButton!
+    @IBAction func cat02(_ sender: Any) {
+        let storyboard: UIStoryboard = self.storyboard!
+        let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
+        modalView.catName = "ほげほげ"
+        modalView.catDetail = "ふがふが"
+        self.present(modalView, animated: true, completion: nil)
+    }
+    @IBOutlet weak var cat03: UIButton!
+    @IBAction func cat03(_ sender: Any) {
+        let storyboard: UIStoryboard = self.storyboard!
+        let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
+        modalView.catName = "ほげほげ"
+        modalView.catDetail = "ふがふが"
+        self.present(modalView, animated: true, completion: nil)
+    }
+    @IBOutlet weak var cat04: UIButton!
+    @IBAction func cat04(_ sender: Any) {
+        let storyboard: UIStoryboard = self.storyboard!
+        let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
+        modalView.catName = "ほげほげ"
+        modalView.catDetail = "ふがふが"
+        self.present(modalView, animated: true, completion: nil)
+    }
+    @IBOutlet weak var cat05: UIButton!
+    @IBAction func cat05(_ sender: Any) {
+        let storyboard: UIStoryboard = self.storyboard!
+        let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
+        modalView.catName = "ほげほげ"
+        modalView.catDetail = "ふがふが"
+        self.present(modalView, animated: true, completion: nil)
+    }
+    @IBOutlet weak var cat06: UIButton!
+    @IBAction func cat06(_ sender: Any) {
+        let storyboard: UIStoryboard = self.storyboard!
+        let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
+        modalView.catName = "ほげほげ"
+        modalView.catDetail = "ふがふが"
+        self.present(modalView, animated: true, completion: nil)
+    }
+    @IBOutlet weak var cat07: UIButton!
+    @IBAction func cat07(_ sender: Any) {
+        let storyboard: UIStoryboard = self.storyboard!
+        let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
+        modalView.catName = "ほげほげ"
+        modalView.catDetail = "ふがふが"
+        self.present(modalView, animated: true, completion: nil)
+    }
+    @IBOutlet weak var cat08: UIButton!
+    @IBAction func cat08(_ sender: Any) {
+        let storyboard: UIStoryboard = self.storyboard!
+        let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
+        modalView.catName = "ほげほげ"
+        modalView.catDetail = "ふがふが"
+        self.present(modalView, animated: true, completion: nil)
+    }
+    @IBOutlet weak var cat09: UIButton!
+    @IBAction func cat09(_ sender: Any) {
+        let storyboard: UIStoryboard = self.storyboard!
+        let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
+        modalView.catName = "ほげほげ"
+        modalView.catDetail = "ふがふが"
+        self.present(modalView, animated: true, completion: nil)
+    }
+    @IBOutlet weak var cat10: UIButton!
+    @IBAction func cat10(_ sender: Any) {
+        let storyboard: UIStoryboard = self.storyboard!
+        let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
+        modalView.catName = "ほげほげ"
+        modalView.catDetail = "ふがふが"
+        self.present(modalView, animated: true, completion: nil)
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
