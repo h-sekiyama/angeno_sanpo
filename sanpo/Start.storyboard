@@ -236,15 +236,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cat01" width="250" height="250"/>
-        <image name="cat02" width="250" height="250"/>
-        <image name="cat03" width="250" height="250"/>
-        <image name="cat04" width="250" height="250"/>
-        <image name="cat05" width="250" height="250"/>
-        <image name="cat06" width="250" height="250"/>
-        <image name="cat07" width="250" height="250"/>
-        <image name="cat08" width="250" height="250"/>
-        <image name="cat09" width="250" height="250"/>
-        <image name="cat10" width="250" height="250"/>
+        <image name="cat01" width="418.5" height="418.5"/>
+        <image name="cat02" width="418.5" height="418.5"/>
+        <image name="cat03" width="418.5" height="418.5"/>
+        <image name="cat04" width="418.5" height="418.5"/>
+        <image name="cat05" width="418.5" height="418.5"/>
+        <image name="cat06" width="418.5" height="418.5"/>
+        <image name="cat07" width="418.5" height="418.5"/>
+        <image name="cat08" width="418.5" height="418.5"/>
+        <image name="cat09" width="418.5" height="418.5"/>
+        <image name="cat10" width="418.5" height="418.5"/>
     </resources>
 </document>

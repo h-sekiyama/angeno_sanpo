@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MainDelegate {
 
     // 各ボタン状態定義
     enum ButtonStatus {
@@ -81,18 +81,6 @@ class ViewController: UIViewController {
     // 累計歩数テキスト
     @IBOutlet weak var totalStepCount: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        cursolImages.append(cursol0ImageView)
-        cursolImages.append(cursol1ImageView)
-        cursolImages.append(cursol2ImageView)
-        cursolImages.append(cursol3ImageView)
-        cursolImages.append(cursol4ImageView)
-        
-        stepCountClass.startStepCount(stepCountLabel: stepCount, totalStepCountLabel: totalStepCount)
-    }
-    
     // 散歩やめるボタンタップ
     @IBAction func stopSanpo(_ sender: Any) {
         
@@ -110,7 +98,7 @@ class ViewController: UIViewController {
     @IBAction func checkButton(_ sender: Any) {
         // 矢印が一つもアクティブになってないと押せない
         if (buttonStatus.filter({$0.value == ButtonStatus.on}).count == 0) {
-            assistText.text = "分かれ道の矢印を選ぶにゃ！"
+            assistText.text = "まずは矢印を２つ以上選ぼう"
             return
         }
         // 既に確定してる矢印がある場合はそれを一旦候補に戻す
@@ -127,7 +115,7 @@ class ViewController: UIViewController {
         cursolImages[okCursolIndex].image = UIImage(named: "cursol_\(okCursolIndex)_ok")!
         buttonStatus[okCursolIndex] = ButtonStatus.ok
         vibrated(vibrated: true, view: cursolImages[okCursolIndex])
-        assistText.text = "どんどん行くにゃ！"
+        assistText.text = "こっちに歩いてみよう！"
     }
     
     // 回転数制御
@@ -155,5 +143,28 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    @IBOutlet weak var catImage: UIImageView!
+    
+    func changeCatImage(catNumber: String) {
+        catImage.image = UIImage(named: "cat\(catNumber)")!
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        stepCountClass.delegate = self
+
+        cursolImages.append(cursol0ImageView)
+        cursolImages.append(cursol1ImageView)
+        cursolImages.append(cursol2ImageView)
+        cursolImages.append(cursol3ImageView)
+        cursolImages.append(cursol4ImageView)
+        
+        if (stepCountClass.readNowCatInfo() != "") {
+            changeCatImage(catNumber: stepCountClass.readNowCatInfo())
+        }
+        
+        stepCountClass.startStepCount(stepCountLabel: stepCount, totalStepCountLabel: totalStepCount)
     }
 }
