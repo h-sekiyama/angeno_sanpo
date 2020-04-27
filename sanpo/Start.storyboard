@@ -15,48 +15,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hEG-x3-P7B">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEG-x3-P7B">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CP5-5n-CDM">
-                                        <rect key="frame" x="176" y="433" width="62" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="散歩開始"/>
-                                        <connections>
-                                            <action selector="goNext:" destination="9By-fB-vPI" eventType="touchUpInside" id="FjU-yV-PbB"/>
-                                        </connections>
-                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="hlg-yc-38M">
+                                        <rect key="frame" x="0.0" y="-18.5" width="414" height="933"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="hlg-yc-38M" secondAttribute="height" multiplier="1242:2800" id="jm8-04-aq0"/>
+                                        </constraints>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="新記録" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31e-Xe-hnP">
-                                        <rect key="frame" x="87" y="165" width="52" height="21"/>
+                                        <rect key="frame" x="33" y="33" width="52" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0歩" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCw-b3-Xok">
-                                        <rect key="frame" x="213" y="165" width="131" height="21"/>
+                                        <rect key="frame" x="131" y="-29.5" width="244" height="20.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="累計" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGE-3R-C9H">
-                                        <rect key="frame" x="104" y="194" width="35" height="21"/>
+                                        <rect key="frame" x="42" y="61" width="35" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0歩" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKH-uW-0SR">
-                                        <rect key="frame" x="168" y="194" width="176" height="21"/>
+                                        <rect key="frame" x="85" y="56" width="290" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zm-1q-ekh">
-                                        <rect key="frame" x="31" y="258" width="100" height="100"/>
+                                        <rect key="frame" x="118" y="123" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="cat01"/>
                                         <connections>
@@ -64,7 +61,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZe-xQ-dWE">
-                                        <rect key="frame" x="157" y="306" width="100" height="100"/>
+                                        <rect key="frame" x="0.0" y="388" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="cat02"/>
                                         <connections>
@@ -72,7 +69,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCS-Cy-2EG">
-                                        <rect key="frame" x="283" y="448" width="100" height="100"/>
+                                        <rect key="frame" x="57" y="381" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="cat03"/>
                                         <connections>
@@ -80,7 +77,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvW-Et-kfS">
-                                        <rect key="frame" x="124" y="538" width="100" height="100"/>
+                                        <rect key="frame" x="274" y="618" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="cat04"/>
                                         <connections>
@@ -88,7 +85,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08f-ZC-XiE">
-                                        <rect key="frame" x="283" y="645" width="100" height="100"/>
+                                        <rect key="frame" x="246" y="388" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="cat05"/>
                                         <connections>
@@ -96,7 +93,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzD-kR-AYp">
-                                        <rect key="frame" x="50" y="677" width="100" height="100"/>
+                                        <rect key="frame" x="85" y="516" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="cat06"/>
                                         <connections>
@@ -104,7 +101,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovd-3m-PEV">
-                                        <rect key="frame" x="261" y="763" width="100" height="100"/>
+                                        <rect key="frame" x="16" y="576" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="cat07"/>
                                         <connections>
@@ -112,7 +109,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Giw-hC-oo7">
-                                        <rect key="frame" x="71" y="52" width="100" height="100"/>
+                                        <rect key="frame" x="33" y="1156.5" width="120" height="418.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="cat08"/>
                                         <connections>
@@ -120,7 +117,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8C-Ad-u3D">
-                                        <rect key="frame" x="295" y="273" width="100" height="100"/>
+                                        <rect key="frame" x="193" y="203" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="cat09"/>
                                         <connections>
@@ -128,20 +125,50 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FtL-hs-s0c">
-                                        <rect key="frame" x="31" y="448" width="100" height="100"/>
+                                        <rect key="frame" x="253" y="498" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="cat10"/>
                                         <connections>
                                             <action selector="cat10:" destination="9By-fB-vPI" eventType="touchUpInside" id="ylM-Yq-qvI"/>
                                         </connections>
                                     </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t1B-OO-gAs" userLabel="BaseImage">
+                                        <rect key="frame" x="207" y="448" width="0.0" height="0.0"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="c79-xK-P5K"/>
+                                            <constraint firstAttribute="width" id="zZ0-ug-wqa"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CP5-5n-CDM">
+                                        <rect key="frame" x="193" y="680" width="62" height="30"/>
+                                        <state key="normal" title="散歩開始"/>
+                                        <connections>
+                                            <action selector="goNext:" destination="9By-fB-vPI" eventType="touchUpInside" id="FjU-yV-PbB"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="CP5-5n-CDM" secondAttribute="bottom" constant="186" id="0wr-S2-KUb"/>
+                                    <constraint firstItem="hlg-yc-38M" firstAttribute="centerY" secondItem="hEG-x3-P7B" secondAttribute="centerY" id="9gU-w7-uXL"/>
+                                    <constraint firstItem="t1B-OO-gAs" firstAttribute="centerX" secondItem="hEG-x3-P7B" secondAttribute="centerX" id="I7o-hL-3KI"/>
+                                    <constraint firstItem="hlg-yc-38M" firstAttribute="centerX" secondItem="hEG-x3-P7B" secondAttribute="centerX" id="QAr-I5-3nn"/>
+                                    <constraint firstAttribute="trailing" secondItem="hlg-yc-38M" secondAttribute="trailing" id="lTg-4o-jRy"/>
+                                    <constraint firstItem="hlg-yc-38M" firstAttribute="leading" secondItem="hEG-x3-P7B" secondAttribute="leading" id="oXv-UG-mFQ"/>
+                                    <constraint firstItem="t1B-OO-gAs" firstAttribute="centerY" secondItem="hEG-x3-P7B" secondAttribute="centerY" id="sXN-ST-ASK"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="hEG-x3-P7B" secondAttribute="bottom" id="AHG-c1-Jj5"/>
+                            <constraint firstItem="hEG-x3-P7B" firstAttribute="top" secondItem="24c-QE-QU7" secondAttribute="top" id="F1k-9a-ZIN"/>
+                            <constraint firstItem="hEG-x3-P7B" firstAttribute="leading" secondItem="24c-QE-QU7" secondAttribute="leading" id="KLc-Wv-9xA"/>
+                            <constraint firstAttribute="trailing" secondItem="hEG-x3-P7B" secondAttribute="trailing" id="Kih-HF-7q4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="25t-AE-ImP"/>
                     </view>
+                    <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="cat01" destination="1zm-1q-ekh" id="mEB-4b-gVN"/>
                         <outlet property="cat02" destination="MZe-xQ-dWE" id="zhQ-EE-CaA"/>
@@ -246,5 +273,6 @@
         <image name="cat08" width="418.5" height="418.5"/>
         <image name="cat09" width="418.5" height="418.5"/>
         <image name="cat10" width="418.5" height="418.5"/>
+        <image name="home" width="621" height="1400"/>
     </resources>
 </document>

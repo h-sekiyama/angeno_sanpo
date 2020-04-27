@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="HiJ-l1-OPc">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="HiJ-l1-OPc">
                                 <rect key="frame" x="41.5" y="324" width="331" height="248"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="HiJ-l1-OPc" secondAttribute="height" multiplier="207:155" id="fub-P3-7cg"/>
@@ -37,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="title" width="443.5" height="322"/>
+        <image name="logo" width="443.5" height="322"/>
     </resources>
 </document>

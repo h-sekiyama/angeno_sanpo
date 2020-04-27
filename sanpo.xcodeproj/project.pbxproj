@@ -125,6 +125,7 @@
 				3E732F6C2439A885003DB97A /* Info.plist */,
 				3E732F5E2439A883003DB97A /* AppDelegate.swift */,
 				3E732F602439A883003DB97A /* SceneDelegate.swift */,
+				3E012EDD2455DF840057C582 /* LaunchScreen.storyboard */,
 				3E6A0B2E2453157200D12F25 /* Start.storyboard */,
 				3E6A0B302453158200D12F25 /* StartViewController.swift */,
 				3E6294C324554E0B00143350 /* ModalViewController.swift */,
@@ -132,7 +133,6 @@
 				3E732F622439A883003DB97A /* ViewController.swift */,
 				3E6F91DD24540D3400464924 /* StepCountClass.swift */,
 				3E6F91E12454382D00464924 /* StepBoarder.swift */,
-				3E012EDD2455DF840057C582 /* LaunchScreen.storyboard */,
 			);
 			path = sanpo;
 			sourceTree = "<group>";
