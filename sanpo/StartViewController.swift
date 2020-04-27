@@ -109,16 +109,16 @@ class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cat01.isHidden = true
-        cat02.isHidden = true
-        cat03.isHidden = true
-        cat04.isHidden = true
-        cat05.isHidden = true
-        cat06.isHidden = true
-        cat07.isHidden = true
-        cat08.isHidden = true
-        cat09.isHidden = true
-        cat10.isHidden = true
+        cat01.isHidden = false
+        cat02.isHidden = false
+        cat03.isHidden = false
+        cat04.isHidden = false
+        cat05.isHidden = false
+        cat06.isHidden = false
+        cat07.isHidden = false
+        cat08.isHidden = false
+        cat09.isHidden = false
+        cat10.isHidden = false
         
         // 一回の散歩での最大歩数表示
         let stepCount: Int = userDefaults.object(forKey: "SanpoStepCount") as? Int ?? 0
