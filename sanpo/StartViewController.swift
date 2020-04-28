@@ -186,7 +186,7 @@ class StartViewController: UIViewController {
         cat01.frame = CGRect(x: centerX - 4, y: centerY + 40, width: 120, height: 120)
         cat02.frame = CGRect(x: centerX - 202, y: centerY - 50, width: 120, height: 120)
         cat03.frame = CGRect(x: centerX - 123, y: centerY - 58, width: 120, height: 120)
-        cat04.frame = CGRect(x: centerX + 80, y: centerY + 180, width: 120, height: 120)
+        cat04.frame = CGRect(x: centerX + 28, y: centerY + 128, width: 120, height: 120)
         cat05.frame = CGRect(x: centerX + 1, y: centerY - 60, width: 120, height: 120)
         cat06.frame = CGRect(x: centerX - 110, y: centerY + 74, width: 120, height: 120)
         cat07.frame = CGRect(x: centerX - 193, y: centerY + 140, width: 120, height: 120)
@@ -210,6 +210,8 @@ extension StartViewController: AVAudioPlayerDelegate {
             // AVAudioPlayerのデリゲートをセット
             audioPlayer.delegate = self
 
+            audioPlayer.numberOfLoops = -1
+            
             // 音声の再生
             audioPlayer.play()
         } catch {

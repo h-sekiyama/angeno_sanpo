@@ -192,6 +192,8 @@ extension ViewController: AVAudioPlayerDelegate {
             // AVAudioPlayerのデリゲートをセット
             audioPlayer.delegate = self
 
+            audioPlayer.numberOfLoops = -1
+            
             // 音声の再生
             audioPlayer.play()
         } catch {
