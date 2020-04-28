@@ -19,13 +19,13 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="1002"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JCb-mh-N47">
-                                <rect key="frame" x="82" y="511" width="250" height="250"/>
+                                <rect key="frame" x="103.66666666666669" y="554" width="207" height="207"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="JCb-mh-N47" secondAttribute="height" multiplier="1:1" id="Sc9-8F-upY"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cursol_0_off" translatesAutoresizingMaskIntoConstraints="NO" id="dc9-eb-1Qr" userLabel="left">
-                                <rect key="frame" x="0.0" y="342" width="82.666666666666671" height="82.666666666666686"/>
+                                <rect key="frame" x="0.0" y="312" width="82.666666666666671" height="82.666666666666686"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dc9-eb-1Qr" secondAttribute="height" id="pIg-NN-8TE"/>
@@ -35,7 +35,7 @@
                                 </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cursol_1_off" translatesAutoresizingMaskIntoConstraints="NO" id="hfi-Sw-zsy" userLabel="left_up">
-                                <rect key="frame" x="82.666666666666671" y="342" width="83.000000000000014" height="82.666666666666686"/>
+                                <rect key="frame" x="82.666666666666671" y="312" width="83.000000000000014" height="82.666666666666686"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hfi-Sw-zsy" secondAttribute="height" id="eLR-jQ-dgC"/>
@@ -45,7 +45,7 @@
                                 </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cursol_2_off" translatesAutoresizingMaskIntoConstraints="NO" id="JWa-WW-nwm" userLabel="up">
-                                <rect key="frame" x="165.66666666666666" y="342" width="82.666666666666657" height="82.666666666666686"/>
+                                <rect key="frame" x="165.66666666666666" y="312" width="82.666666666666657" height="82.666666666666686"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="JWa-WW-nwm" secondAttribute="height" id="DCW-or-VCM"/>
@@ -55,7 +55,7 @@
                                 </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cursol_3_off" translatesAutoresizingMaskIntoConstraints="NO" id="gPi-d5-ng3" userLabel="right_up">
-                                <rect key="frame" x="248.33333333333337" y="342" width="83" height="82.666666666666686"/>
+                                <rect key="frame" x="248.33333333333337" y="312" width="83" height="82.666666666666686"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gPi-d5-ng3" secondAttribute="height" id="wuh-1l-drS"/>
@@ -65,7 +65,7 @@
                                 </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cursol_4_off" translatesAutoresizingMaskIntoConstraints="NO" id="4WB-EX-EXM" userLabel="right">
-                                <rect key="frame" x="331.33333333333331" y="342" width="82.666666666666686" height="82.666666666666686"/>
+                                <rect key="frame" x="331.33333333333331" y="312" width="82.666666666666686" height="82.666666666666686"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4WB-EX-EXM" secondAttribute="height" id="6di-Ty-msX"/>
@@ -75,7 +75,7 @@
                                 </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hi-rG-bX4">
-                                <rect key="frame" x="135" y="248" width="144" height="24"/>
+                                <rect key="frame" x="135" y="218" width="144" height="24"/>
                                 <attributedString key="attributedText">
                                     <fragment content="お散歩開始！">
                                         <attributes>
@@ -109,10 +109,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7p-ky-dK5">
-                                <rect key="frame" x="11" y="56" width="133" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="&lt; 散歩をやめる"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7p-ky-dK5">
+                                <rect key="frame" x="11" y="56" width="133" height="50.333333333333343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="U7p-ky-dK5" secondAttribute="height" multiplier="327:124" id="2kg-R3-VAD"/>
+                                </constraints>
+                                <state key="normal" image="gohome"/>
                                 <connections>
                                     <action selector="stopSanpo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Er6-mA-Qxp"/>
                                 </connections>
@@ -141,13 +143,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xfh-0m-m9S" secondAttribute="bottom" constant="30" id="ayh-Ii-wa7"/>
                             <constraint firstItem="xfh-0m-m9S" firstAttribute="top" secondItem="JCb-mh-N47" secondAttribute="bottom" constant="10" id="bEV-QL-lea"/>
                             <constraint firstItem="gPi-d5-ng3" firstAttribute="top" secondItem="0hi-rG-bX4" secondAttribute="bottom" constant="70" id="cFB-b1-3iE"/>
-                            <constraint firstItem="0hi-rG-bX4" firstAttribute="top" secondItem="hWP-dO-zJh" secondAttribute="bottom" constant="90" id="eRw-Op-3jd"/>
+                            <constraint firstItem="0hi-rG-bX4" firstAttribute="top" secondItem="hWP-dO-zJh" secondAttribute="bottom" constant="60" id="eRw-Op-3jd"/>
                             <constraint firstItem="hWP-dO-zJh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fJC-pl-Ht8"/>
                             <constraint firstItem="dc9-eb-1Qr" firstAttribute="top" secondItem="0hi-rG-bX4" secondAttribute="bottom" constant="70" id="ffQ-g4-oej"/>
                             <constraint firstItem="dc9-eb-1Qr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i9b-Yg-FZx"/>
                             <constraint firstItem="U7p-ky-dK5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="lj4-Nl-QSv"/>
                             <constraint firstItem="U7p-ky-dK5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="11" id="ndz-qf-n5i"/>
-                            <constraint firstItem="JCb-mh-N47" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.603865" id="npf-r8-kug"/>
+                            <constraint firstItem="JCb-mh-N47" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="npf-r8-kug"/>
                             <constraint firstItem="hWP-dO-zJh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="71" id="nuq-h3-Okd"/>
                             <constraint firstItem="hfi-Sw-zsy" firstAttribute="top" secondItem="0hi-rG-bX4" secondAttribute="bottom" constant="70" id="qb6-AI-KBS"/>
                             <constraint firstItem="0hi-rG-bX4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qqI-Cw-wOh"/>
@@ -209,5 +211,6 @@
         <image name="cursol_2_off" width="60" height="65.666664123535156"/>
         <image name="cursol_3_off" width="54.666667938232422" height="61.333332061767578"/>
         <image name="cursol_4_off" width="65.666664123535156" height="60"/>
+        <image name="gohome" width="124" height="41.333332061767578"/>
     </resources>
 </document>

@@ -1,4 +1,5 @@
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController, MainDelegate {
 
@@ -84,6 +85,8 @@ class ViewController: UIViewController, MainDelegate {
     // 散歩やめるボタンタップ
     @IBAction func stopSanpo(_ sender: Any) {
         
+        audioPlayer.stop()
+        
         stepCountClass.stopSanpo()
         
         let startViewController = UIStoryboard(name: "Start", bundle: nil).instantiateViewController(withIdentifier: "start") as UIViewController
@@ -151,8 +154,14 @@ class ViewController: UIViewController, MainDelegate {
         catImage.image = UIImage(named: "cat\(catNumber)")!
     }
     
+    var audioPlayer: AVAudioPlayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // mp3音声(SOUND.mp3)の再生
+        playSound(name: "brightening")
+        
         stepCountClass.delegate = self
 
         cursolImages.append(cursol0ImageView)
@@ -166,5 +175,26 @@ class ViewController: UIViewController, MainDelegate {
         }
         
         stepCountClass.startStepCount(stepCountLabel: stepCount, totalStepCountLabel: totalStepCount)
+    }
+}
+
+extension ViewController: AVAudioPlayerDelegate {
+    func playSound(name: String) {
+        guard let path = Bundle.main.path(forResource: name, ofType: "mp3") else {
+            print("音源ファイルが見つかりません")
+            return
+        }
+
+        do {
+            // AVAudioPlayerのインスタンス化
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+
+            // AVAudioPlayerのデリゲートをセット
+            audioPlayer.delegate = self
+
+            // 音声の再生
+            audioPlayer.play()
+        } catch {
+        }
     }
 }

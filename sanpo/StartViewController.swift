@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import AVFoundation
 
 class StartViewController: UIViewController {
     
@@ -9,6 +10,8 @@ class StartViewController: UIViewController {
         let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "main") as UIViewController
         
         mainViewController.modalPresentationStyle = .fullScreen
+        
+        audioPlayer.stop()
         // Viewの移動する.
         self.present(mainViewController, animated: true, completion: nil)
     }
@@ -105,21 +108,27 @@ class StartViewController: UIViewController {
         self.present(modalView, animated: true, completion: nil)
     }
 
+    var audioPlayer: AVAudioPlayer!
+    
+    @IBOutlet weak var homeImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+                
+        // mp3音声(SOUND.mp3)の再生
+        playSound(name: "menuettm")
         
-        cat01.isHidden = false
-        cat02.isHidden = false
-        cat03.isHidden = false
-        cat04.isHidden = false
-        cat05.isHidden = false
-        cat06.isHidden = false
-        cat07.isHidden = false
-        cat08.isHidden = false
-        cat09.isHidden = false
-        cat10.isHidden = false
-        
+        cat01.isHidden = true
+        cat02.isHidden = true
+        cat03.isHidden = true
+        cat04.isHidden = true
+        cat05.isHidden = true
+        cat06.isHidden = true
+        cat07.isHidden = true
+        cat08.isHidden = true
+        cat09.isHidden = true
+        cat10.isHidden = true
+
         // 一回の散歩での最大歩数表示
         let stepCount: Int = userDefaults.object(forKey: "SanpoStepCount") as? Int ?? 0
         maxStepCountLabel.text =  "\(stepCount)歩"
@@ -157,6 +166,53 @@ class StartViewController: UIViewController {
         }
         if (totalStepCount > StepBoarder.boarder_10.rawValue) {
             cat10.isHidden = false
+        }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        // 使用する端末の中心座標習得
+        let centerX = self.view.frame.midX
+        let centerY = self.view.frame.midY
+        
+        // 使用する端末の最大縦横習得
+//        let deviceWidth = self.view.frame.maxX
+//        let deviceHeight = self.view.frame.maxY
+        
+        homeImage.center.x = self.view.center.x
+        homeImage.center.y = self.view.center.y
+        
+        cat01.frame = CGRect(x: centerX - 4, y: centerY + 40, width: 120, height: 120)
+        cat02.frame = CGRect(x: centerX - 202, y: centerY - 50, width: 120, height: 120)
+        cat03.frame = CGRect(x: centerX - 123, y: centerY - 58, width: 120, height: 120)
+        cat04.frame = CGRect(x: centerX + 80, y: centerY + 180, width: 120, height: 120)
+        cat05.frame = CGRect(x: centerX + 1, y: centerY - 60, width: 120, height: 120)
+        cat06.frame = CGRect(x: centerX - 110, y: centerY + 74, width: 120, height: 120)
+        cat07.frame = CGRect(x: centerX - 193, y: centerY + 140, width: 120, height: 120)
+        cat08.frame = CGRect(x: centerX - 163, y: centerY - 191, width: 120, height: 120)
+        cat09.frame = CGRect(x: centerX - 20, y: centerY - 240, width: 120, height: 120)
+        cat10.frame = CGRect(x: centerX + 90, y: centerY + 1, width: 120, height: 120)
+    }
+}
+
+extension StartViewController: AVAudioPlayerDelegate {
+    func playSound(name: String) {
+        guard let path = Bundle.main.path(forResource: name, ofType: "mp3") else {
+            print("音源ファイルが見つかりません")
+            return
+        }
+
+        do {
+            // AVAudioPlayerのインスタンス化
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+
+            // AVAudioPlayerのデリゲートをセット
+            audioPlayer.delegate = self
+
+            // 音声の再生
+            audioPlayer.play()
+        } catch {
         }
     }
 }

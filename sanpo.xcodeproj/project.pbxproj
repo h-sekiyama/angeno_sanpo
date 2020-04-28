@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3E012EDE2455DF840057C582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E012EDD2455DF840057C582 /* LaunchScreen.storyboard */; };
+		3E012EE6245870970057C582 /* brightening.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3E012EE5245870970057C582 /* brightening.mp3 */; };
+		3E012EEC245877E00057C582 /* menuettm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3E012EEB245877E00057C582 /* menuettm.mp3 */; };
 		3E6294C424554E0B00143350 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6294C324554E0B00143350 /* ModalViewController.swift */; };
 		3E6A0B2F2453157200D12F25 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6A0B2E2453157200D12F25 /* Start.storyboard */; };
 		3E6A0B312453158200D12F25 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A0B302453158200D12F25 /* StartViewController.swift */; };
@@ -42,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		3E012EDD2455DF840057C582 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3E012EE5245870970057C582 /* brightening.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = brightening.mp3; path = ../../../Desktop/brightening.mp3; sourceTree = "<group>"; };
+		3E012EEB245877E00057C582 /* menuettm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = menuettm.mp3; path = ../../../Desktop/menuettm.mp3; sourceTree = "<group>"; };
 		3E6294C324554E0B00143350 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		3E6A0B2E2453157200D12F25 /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
 		3E6A0B302453158200D12F25 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 		3E732F5D2439A883003DB97A /* sanpo */ = {
 			isa = PBXGroup;
 			children = (
+				3E012EEB245877E00057C582 /* menuettm.mp3 */,
+				3E012EE5245870970057C582 /* brightening.mp3 */,
 				3E732F672439A885003DB97A /* Assets.xcassets */,
 				3E732F6C2439A885003DB97A /* Info.plist */,
 				3E732F5E2439A883003DB97A /* AppDelegate.swift */,
@@ -260,7 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E6A0B2F2453157200D12F25 /* Start.storyboard in Resources */,
+				3E012EE6245870970057C582 /* brightening.mp3 in Resources */,
 				3E012EDE2455DF840057C582 /* LaunchScreen.storyboard in Resources */,
+				3E012EEC245877E00057C582 /* menuettm.mp3 in Resources */,
 				3E732F682439A885003DB97A /* Assets.xcassets in Resources */,
 				3E732F662439A883003DB97A /* Main.storyboard in Resources */,
 			);

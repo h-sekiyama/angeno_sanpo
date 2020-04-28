@@ -18,20 +18,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEG-x3-P7B">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="hlg-yc-38M">
-                                        <rect key="frame" x="0.0" y="-18.5" width="414" height="933"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="hlg-yc-38M" secondAttribute="height" multiplier="1242:2800" id="jm8-04-aq0"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zm-1q-ekh">
-                                        <rect key="frame" x="120" y="125" width="120" height="120"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="hlg-yc-38M">
+                                        <rect key="frame" x="0.0" y="-252" width="414" height="1400"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="cat01"/>
-                                        <connections>
-                                            <action selector="cat01:" destination="9By-fB-vPI" eventType="touchUpInside" id="vl7-gp-gS3"/>
-                                        </connections>
-                                    </button>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZe-xQ-dWE">
                                         <rect key="frame" x="0.0" y="391" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -41,7 +31,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCS-Cy-2EG">
-                                        <rect key="frame" x="114" y="393" width="120" height="120"/>
+                                        <rect key="frame" x="109" y="389" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="cat03"/>
                                         <connections>
@@ -57,7 +47,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08f-ZC-XiE">
-                                        <rect key="frame" x="245" y="391" width="120" height="120"/>
+                                        <rect key="frame" x="227" y="388" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="cat05"/>
                                         <connections>
@@ -97,7 +87,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FtL-hs-s0c">
-                                        <rect key="frame" x="254" y="500" width="120" height="120"/>
+                                        <rect key="frame" x="321" y="456" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="cat10"/>
                                         <connections>
@@ -170,24 +160,28 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zm-1q-ekh">
+                                        <rect key="frame" x="202" y="502" width="120" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="cat01"/>
+                                        <connections>
+                                            <action selector="cat01:" destination="9By-fB-vPI" eventType="touchUpInside" id="vl7-gp-gS3"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="TNG-Aj-lw9" firstAttribute="leading" secondItem="hEG-x3-P7B" secondAttribute="leading" constant="10" id="3fb-D0-1Ec"/>
-                                    <constraint firstItem="hlg-yc-38M" firstAttribute="centerY" secondItem="hEG-x3-P7B" secondAttribute="centerY" id="9gU-w7-uXL"/>
                                     <constraint firstItem="CP5-5n-CDM" firstAttribute="width" secondItem="hEG-x3-P7B" secondAttribute="width" multiplier="0.8" id="AAV-97-GN6"/>
                                     <constraint firstItem="TNG-Aj-lw9" firstAttribute="top" secondItem="hEG-x3-P7B" secondAttribute="top" constant="30" id="NsY-36-Pkg"/>
                                     <constraint firstAttribute="bottom" secondItem="CP5-5n-CDM" secondAttribute="bottom" constant="20" id="OaJ-vH-39x"/>
-                                    <constraint firstItem="hlg-yc-38M" firstAttribute="centerX" secondItem="hEG-x3-P7B" secondAttribute="centerX" id="QAr-I5-3nn"/>
                                     <constraint firstItem="CP5-5n-CDM" firstAttribute="centerX" secondItem="hEG-x3-P7B" secondAttribute="centerX" id="VbS-OY-Ud7"/>
                                     <constraint firstItem="TNG-Aj-lw9" firstAttribute="trailing" secondItem="GCw-b3-Xok" secondAttribute="trailing" constant="40" id="Yz8-OS-st5"/>
                                     <constraint firstItem="31e-Xe-hnP" firstAttribute="top" secondItem="TNG-Aj-lw9" secondAttribute="top" constant="20" id="aPf-n5-uNk"/>
                                     <constraint firstItem="GCw-b3-Xok" firstAttribute="top" secondItem="TNG-Aj-lw9" secondAttribute="top" constant="20" id="bXr-Fa-yKx"/>
                                     <constraint firstItem="TNG-Aj-lw9" firstAttribute="bottom" secondItem="kGE-3R-C9H" secondAttribute="bottom" constant="20" id="fga-Th-vGq"/>
-                                    <constraint firstAttribute="trailing" secondItem="hlg-yc-38M" secondAttribute="trailing" id="lTg-4o-jRy"/>
                                     <constraint firstItem="TNG-Aj-lw9" firstAttribute="trailing" secondItem="nKH-uW-0SR" secondAttribute="trailing" constant="40" id="mEZ-TU-NUF"/>
                                     <constraint firstItem="31e-Xe-hnP" firstAttribute="leading" secondItem="hEG-x3-P7B" secondAttribute="leading" constant="42" id="mfR-ko-7sB"/>
-                                    <constraint firstItem="hlg-yc-38M" firstAttribute="leading" secondItem="hEG-x3-P7B" secondAttribute="leading" id="oXv-UG-mFQ"/>
                                     <constraint firstItem="kGE-3R-C9H" firstAttribute="leading" secondItem="hEG-x3-P7B" secondAttribute="leading" constant="42" id="reD-Hj-zjR"/>
                                     <constraint firstAttribute="trailing" secondItem="TNG-Aj-lw9" secondAttribute="trailing" constant="10" id="tsc-f4-xhm"/>
                                     <constraint firstItem="TNG-Aj-lw9" firstAttribute="bottom" secondItem="nKH-uW-0SR" secondAttribute="bottom" constant="20" id="xci-4F-35w"/>
@@ -218,6 +212,7 @@
                         <outlet property="cat08" destination="Giw-hC-oo7" id="MAO-RA-zrQ"/>
                         <outlet property="cat09" destination="S8C-Ad-u3D" id="FjP-of-8DU"/>
                         <outlet property="cat10" destination="FtL-hs-s0c" id="fHA-Qq-qof"/>
+                        <outlet property="homeImage" destination="hlg-yc-38M" id="cl7-Xf-cID"/>
                         <outlet property="maxStepCountLabel" destination="GCw-b3-Xok" id="Uvh-ZC-M39"/>
                         <outlet property="totalStepCountLabel" destination="nKH-uW-0SR" id="oJc-cI-4n4"/>
                     </connections>
@@ -237,47 +232,56 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nR6-sv-sC4">
                                 <rect key="frame" x="41.5" y="261.5" width="331" height="373"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWU-ct-L9a">
-                                        <rect key="frame" x="19" y="61" width="293" height="239"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWU-ct-L9a">
+                                        <rect key="frame" x="19" y="131.5" width="293" height="110.5"/>
                                         <attributedString key="attributedText">
                                             <fragment content="猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明">
                                                 <attributes>
-                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                    <color key="NSColor" red="0.67843137254901964" green="0.39215686274509803" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="17" name=".HiraKakuInterface-W3"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vcg-a5-R5E">
-                                        <rect key="frame" x="19" y="8" width="304" height="27"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="猫の名前">
-                                                <attributes>
-                                                    <font key="NSFont" metaFont="system" size="24"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="猫の名前" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vcg-a5-R5E">
+                                        <rect key="frame" x="117" y="20" width="97.5" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" red="0.67843137254901964" green="0.39215686274509803" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thd-kO-Qoo">
-                                        <rect key="frame" x="143" y="335" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="閉じる"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thd-kO-Qoo">
+                                        <rect key="frame" x="111" y="329.5" width="109" height="35.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="thd-kO-Qoo" secondAttribute="height" multiplier="296:96" id="rc6-6L-yXV"/>
+                                        </constraints>
+                                        <state key="normal" image="win_close"/>
                                         <connections>
                                             <action selector="closeModal:" destination="w1f-OU-cep" eventType="touchUpInside" id="e2m-9J-RtP"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.93021970990000002" blue="0.75520831349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstItem="thd-kO-Qoo" firstAttribute="width" secondItem="nR6-sv-sC4" secondAttribute="width" multiplier="0.33" id="5j4-bA-Qah"/>
                                     <constraint firstAttribute="width" secondItem="nR6-sv-sC4" secondAttribute="height" multiplier="8:9" id="9Tr-bD-oxg"/>
+                                    <constraint firstAttribute="bottom" secondItem="thd-kO-Qoo" secondAttribute="bottom" constant="8" id="Irk-BU-cmb"/>
+                                    <constraint firstItem="eWU-ct-L9a" firstAttribute="centerY" secondItem="nR6-sv-sC4" secondAttribute="centerY" id="Sjh-cp-SFz"/>
+                                    <constraint firstItem="Vcg-a5-R5E" firstAttribute="top" secondItem="nR6-sv-sC4" secondAttribute="top" constant="20" id="ThY-Z2-u7M"/>
+                                    <constraint firstItem="thd-kO-Qoo" firstAttribute="centerX" secondItem="nR6-sv-sC4" secondAttribute="centerX" id="ZC0-J9-1td"/>
+                                    <constraint firstItem="eWU-ct-L9a" firstAttribute="width" secondItem="nR6-sv-sC4" secondAttribute="width" multiplier="0.885196" id="lqC-mc-dg8"/>
+                                    <constraint firstItem="eWU-ct-L9a" firstAttribute="centerX" secondItem="nR6-sv-sC4" secondAttribute="centerX" id="rP0-xz-9qM"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.79607843137254897" green="0.40993976589999997" blue="0.22683709860000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -287,12 +291,14 @@
                             <constraint firstItem="nR6-sv-sC4" firstAttribute="centerY" secondItem="MvU-Cs-0R2" secondAttribute="centerY" id="1EZ-fd-qGR"/>
                             <constraint firstItem="nR6-sv-sC4" firstAttribute="centerX" secondItem="MvU-Cs-0R2" secondAttribute="centerX" id="OQH-QA-PMx"/>
                             <constraint firstItem="nR6-sv-sC4" firstAttribute="width" secondItem="MvU-Cs-0R2" secondAttribute="width" multiplier="0.8" id="XIF-Op-16f"/>
+                            <constraint firstItem="Vcg-a5-R5E" firstAttribute="centerX" secondItem="Xse-FV-fe4" secondAttribute="centerX" id="e5O-3b-omC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xse-FV-fe4"/>
                     </view>
                     <connections>
                         <outlet property="catDetailLabel" destination="eWU-ct-L9a" id="TCd-z8-L85"/>
                         <outlet property="catNameLabel" destination="Vcg-a5-R5E" id="Jer-R9-ZpE"/>
+                        <outlet property="modalView" destination="nR6-sv-sC4" id="x4Y-A0-lId"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T46-li-N8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -314,5 +320,6 @@
         <image name="cat10" width="418.5" height="418.5"/>
         <image name="home" width="621" height="1400"/>
         <image name="kiroku_area" width="585.5" height="119.5"/>
+        <image name="win_close" width="134.5" height="48"/>
     </resources>
 </document>
