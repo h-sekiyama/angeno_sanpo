@@ -2,19 +2,19 @@ public enum StepBoarder: Int {
     case boarder_01 = 100
     case boarder_02 = 500
     case boarder_03 = 1000
-    case boarder_04 = 10000
-    case boarder_05 = 20000
-    case boarder_06 = 30000
+    case boarder_04 = 5000
+    case boarder_05 = 15000
+    case boarder_06 = 25000
     case boarder_07 = 40000
-    case boarder_08 = 50000
-    case boarder_09 = 70000
+    case boarder_08 = 60000
+    case boarder_09 = 80000
     case boarder_10 = 100000
 }
 
 public enum StepBoarderCat: String {
     case boarder_01 = "長毛の猫"
     case boarder_02 = "黒猫"
-    case boarder_03 = "茶トラ"
+    case boarder_03 = "茶サビ"
     case boarder_04 = "白黒猫"
     case boarder_05 = "白猫"
     case boarder_06 = "ロシアンブルー"
