@@ -1,8 +1,9 @@
 import Foundation
 import UIKit
-import AVFoundation
 
 class StartViewController: UIViewController {
+    
+    let musicPlayer  = MusicPlayer()
     
     // Nextボタン押下時の処理
     @IBAction func goNext(_ sender: Any) {
@@ -11,7 +12,7 @@ class StartViewController: UIViewController {
         
         mainViewController.modalPresentationStyle = .fullScreen
         
-        audioPlayer.stop()
+        musicPlayer.audioPlayer.stop()
         // Viewの移動する.
         self.present(mainViewController, animated: true, completion: nil)
     }
@@ -107,8 +108,6 @@ class StartViewController: UIViewController {
         modalView.catDetail = StepBoarderCatInfo.boarder_10.rawValue
         self.present(modalView, animated: true, completion: nil)
     }
-
-    var audioPlayer: AVAudioPlayer!
     
     @IBOutlet weak var homeImage: UIImageView!
     
@@ -116,7 +115,8 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
                 
         // mp3音声(SOUND.mp3)の再生
-        playSound(name: "menuettm")
+        musicPlayer.playSound(name: "menuettm")
+        
         
         cat01.isHidden = true
         cat02.isHidden = true
@@ -193,28 +193,5 @@ class StartViewController: UIViewController {
         cat08.frame = CGRect(x: centerX - 163, y: centerY - 191, width: 120, height: 120)
         cat09.frame = CGRect(x: centerX - 20, y: centerY - 240, width: 120, height: 120)
         cat10.frame = CGRect(x: centerX + 90, y: centerY + 1, width: 120, height: 120)
-    }
-}
-
-extension StartViewController: AVAudioPlayerDelegate {
-    func playSound(name: String) {
-        guard let path = Bundle.main.path(forResource: name, ofType: "mp3") else {
-            print("音源ファイルが見つかりません")
-            return
-        }
-
-        do {
-            // AVAudioPlayerのインスタンス化
-            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
-
-            // AVAudioPlayerのデリゲートをセット
-            audioPlayer.delegate = self
-
-            audioPlayer.numberOfLoops = -1
-            
-            // 音声の再生
-            audioPlayer.play()
-        } catch {
-        }
     }
 }

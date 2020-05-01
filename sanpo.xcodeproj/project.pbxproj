@@ -23,6 +23,7 @@
 		3E732F682439A885003DB97A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E732F672439A885003DB97A /* Assets.xcassets */; };
 		3E732F762439A885003DB97A /* sanpoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E732F752439A885003DB97A /* sanpoTests.swift */; };
 		3E732F812439A885003DB97A /* sanpoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E732F802439A885003DB97A /* sanpoUITests.swift */; };
+		3E7564BF245BFC810019B38A /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7564BE245BFC810019B38A /* MusicPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		3E732F7C2439A885003DB97A /* sanpoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sanpoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E732F802439A885003DB97A /* sanpoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sanpoUITests.swift; sourceTree = "<group>"; };
 		3E732F822439A885003DB97A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E7564BE245BFC810019B38A /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				3E732F622439A883003DB97A /* ViewController.swift */,
 				3E6F91DD24540D3400464924 /* StepCountClass.swift */,
 				3E6F91E12454382D00464924 /* StepBoarder.swift */,
+				3E7564BE245BFC810019B38A /* MusicPlayer.swift */,
 			);
 			path = sanpo;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				3E6294C424554E0B00143350 /* ModalViewController.swift in Sources */,
 				3E732F632439A883003DB97A /* ViewController.swift in Sources */,
 				3E6A0B312453158200D12F25 /* StartViewController.swift in Sources */,
+				3E7564BF245BFC810019B38A /* MusicPlayer.swift in Sources */,
 				3E732F5F2439A883003DB97A /* AppDelegate.swift in Sources */,
 				3E6F91E22454382D00464924 /* StepBoarder.swift in Sources */,
 				3E6F91DE24540D3400464924 /* StepCountClass.swift in Sources */,
