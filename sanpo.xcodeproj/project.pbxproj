@@ -24,6 +24,7 @@
 		3E732F762439A885003DB97A /* sanpoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E732F752439A885003DB97A /* sanpoTests.swift */; };
 		3E732F812439A885003DB97A /* sanpoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E732F802439A885003DB97A /* sanpoUITests.swift */; };
 		3E7564BF245BFC810019B38A /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7564BE245BFC810019B38A /* MusicPlayer.swift */; };
+		3E7564C1245C04360019B38A /* ModalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E7564C0245C04360019B38A /* ModalViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		3E732F802439A885003DB97A /* sanpoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sanpoUITests.swift; sourceTree = "<group>"; };
 		3E732F822439A885003DB97A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E7564BE245BFC810019B38A /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
+		3E7564C0245C04360019B38A /* ModalViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ModalViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,12 +138,13 @@
 				3E012EDD2455DF840057C582 /* LaunchScreen.storyboard */,
 				3E6A0B2E2453157200D12F25 /* Start.storyboard */,
 				3E6A0B302453158200D12F25 /* StartViewController.swift */,
-				3E6294C324554E0B00143350 /* ModalViewController.swift */,
 				3E732F642439A883003DB97A /* Main.storyboard */,
 				3E732F622439A883003DB97A /* ViewController.swift */,
 				3E6F91DD24540D3400464924 /* StepCountClass.swift */,
 				3E6F91E12454382D00464924 /* StepBoarder.swift */,
 				3E7564BE245BFC810019B38A /* MusicPlayer.swift */,
+				3E7564C0245C04360019B38A /* ModalViewController.storyboard */,
+				3E6294C324554E0B00143350 /* ModalViewController.swift */,
 			);
 			path = sanpo;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E6A0B2F2453157200D12F25 /* Start.storyboard in Resources */,
+				3E7564C1245C04360019B38A /* ModalViewController.storyboard in Resources */,
 				3E012EE6245870970057C582 /* brightening.mp3 in Resources */,
 				3E012EDE2455DF840057C582 /* LaunchScreen.storyboard in Resources */,
 				3E012EEC245877E00057C582 /* menuettm.mp3 in Resources */,

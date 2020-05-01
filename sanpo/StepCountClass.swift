@@ -26,7 +26,7 @@ class StepCountClass {
         maxStepCount = 0
         totalStepCount = readTotalSanpStepCount()
         pedometer = CMPedometer()
-        nowCatInfo = readNowCatInfo()
+        nowCatInfo = readNowCatNumber()
     }
 
     func startStepCount(stepCountLabel: UILabel, totalStepCountLabel: UILabel) {
@@ -48,61 +48,61 @@ class StepCountClass {
                     if (self.readNotificationFlag(stepBoarder: 1)) {
                         self.sendNotification(catName: StepBoarderCat.boarder_01.rawValue, catNumber: "01")
                         self.saveNotificationFlag(stepBoarder: 1)
-                        self.saveNowCatInfo(nowCatNumber: "01")
+                        self.saveNowCatNumber(nowCatNumber: "01")
                     }
                 } else if case StepBoarder.boarder_02.rawValue ... StepBoarder.boarder_03.rawValue = (data.numberOfSteps.intValue + self.totalStepCount) {
                     if (self.readNotificationFlag(stepBoarder: 2)) {
                         self.sendNotification(catName: StepBoarderCat.boarder_02.rawValue, catNumber: "02")
                         self.saveNotificationFlag(stepBoarder: 2)
-                        self.saveNowCatInfo(nowCatNumber: "02")
+                        self.saveNowCatNumber(nowCatNumber: "02")
                     }
                 } else if case StepBoarder.boarder_03.rawValue ... StepBoarder.boarder_04.rawValue = (data.numberOfSteps.intValue + self.totalStepCount) {
                     if (self.readNotificationFlag(stepBoarder: 3)) {
                         self.sendNotification(catName: StepBoarderCat.boarder_03.rawValue, catNumber: "03")
                         self.saveNotificationFlag(stepBoarder: 3)
-                        self.saveNowCatInfo(nowCatNumber: "03")
+                        self.saveNowCatNumber(nowCatNumber: "03")
                     }
                 } else if case StepBoarder.boarder_04.rawValue ... StepBoarder.boarder_05.rawValue = (data.numberOfSteps.intValue + self.totalStepCount) {
                     if (self.readNotificationFlag(stepBoarder: 4)) {
                         self.sendNotification(catName: StepBoarderCat.boarder_04.rawValue, catNumber: "04")
                         self.saveNotificationFlag(stepBoarder: 4)
-                        self.saveNowCatInfo(nowCatNumber: "04")
+                        self.saveNowCatNumber(nowCatNumber: "04")
                     }
                 } else if case StepBoarder.boarder_05.rawValue ... StepBoarder.boarder_06.rawValue = (data.numberOfSteps.intValue + self.totalStepCount) {
                     if (self.readNotificationFlag(stepBoarder: 5)) {
                         self.sendNotification(catName: StepBoarderCat.boarder_05.rawValue, catNumber: "05")
                         self.saveNotificationFlag(stepBoarder: 5)
-                        self.saveNowCatInfo(nowCatNumber: "05")
+                        self.saveNowCatNumber(nowCatNumber: "05")
                     }
                 } else if case StepBoarder.boarder_06.rawValue ... StepBoarder.boarder_07.rawValue = (data.numberOfSteps.intValue + self.totalStepCount) {
                     if (self.readNotificationFlag(stepBoarder: 6)) {
                         self.sendNotification(catName: StepBoarderCat.boarder_06.rawValue, catNumber: "06")
                         self.saveNotificationFlag(stepBoarder: 6)
-                        self.saveNowCatInfo(nowCatNumber: "06")
+                        self.saveNowCatNumber(nowCatNumber: "06")
                     }
                 } else if case StepBoarder.boarder_07.rawValue ... StepBoarder.boarder_08.rawValue = (data.numberOfSteps.intValue + self.totalStepCount) {
                     if (self.readNotificationFlag(stepBoarder: 7)) {
                         self.sendNotification(catName: StepBoarderCat.boarder_07.rawValue, catNumber: "07")
                         self.saveNotificationFlag(stepBoarder: 7)
-                        self.saveNowCatInfo(nowCatNumber: "07")
+                        self.saveNowCatNumber(nowCatNumber: "07")
                     }
                 } else if case StepBoarder.boarder_08.rawValue ... StepBoarder.boarder_09.rawValue = (data.numberOfSteps.intValue + self.totalStepCount) {
                     if (self.readNotificationFlag(stepBoarder: 8)) {
                         self.sendNotification(catName: StepBoarderCat.boarder_08.rawValue, catNumber: "08")
                         self.saveNotificationFlag(stepBoarder: 8)
-                        self.saveNowCatInfo(nowCatNumber: "08")
+                        self.saveNowCatNumber(nowCatNumber: "08")
                     }
                 } else if case StepBoarder.boarder_09.rawValue ... StepBoarder.boarder_10.rawValue = (data.numberOfSteps.intValue + self.totalStepCount) {
                     if (self.readNotificationFlag(stepBoarder: 9)) {
                         self.sendNotification(catName: StepBoarderCat.boarder_09.rawValue, catNumber: "09")
                         self.saveNotificationFlag(stepBoarder: 9)
-                        self.saveNowCatInfo(nowCatNumber: "09")
+                        self.saveNowCatNumber(nowCatNumber: "09")
                     }
                 } else if StepBoarder.boarder_10.rawValue < (data.numberOfSteps.intValue + self.totalStepCount) {
                     if (self.readNotificationFlag(stepBoarder: 10)) {
                         self.sendNotification(catName: StepBoarderCat.boarder_10.rawValue, catNumber: "10")
                         self.saveNotificationFlag(stepBoarder: 10)
-                        self.saveNowCatInfo(nowCatNumber: "10")
+                        self.saveNowCatNumber(nowCatNumber: "10")
                     }
                 }
             }
@@ -149,14 +149,14 @@ class StepCountClass {
     }
     
     // userDefaultから現在連れている猫情報を取得
-    func readNowCatInfo() -> String {
+    func readNowCatNumber() -> String {
        // Keyを指定して読み込み
-        let nowCatInfo: String = userDefaults.object(forKey: "SanpoNowCatInfo") as? String ?? ""
-        return nowCatInfo
+        let nowCatNumber: String = userDefaults.object(forKey: "SanpoNowCatInfo") as? String ?? ""
+        return nowCatNumber
     }
     
     // userDefaultから通知表示済みフラグ記録
-    func saveNowCatInfo(nowCatNumber: String){
+    func saveNowCatNumber(nowCatNumber: String){
        // Keyを指定して保存
        userDefaults.set(nowCatNumber, forKey: "SanpoNowCatInfo")
     }

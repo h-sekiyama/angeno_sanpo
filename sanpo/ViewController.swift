@@ -151,6 +151,14 @@ class ViewController: UIViewController, MainDelegate {
 
     @IBOutlet weak var catImage: UIImageView!
     
+    @IBAction func tapCat(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "ModalViewController", bundle: nil)
+        let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
+        modalView.catName = StepBoarderCat.getCatName(catNumber: stepCountClass.readNowCatNumber())
+        modalView.catDetail = StepBoarderCatInfo.getCatInfo(catNumber: stepCountClass.readNowCatNumber())
+        self.present(modalView, animated: true, completion: nil)
+    }
+    
     func changeCatImage(catNumber: String) {
         catImage.image = UIImage(named: "cat\(catNumber)")!
     }
@@ -169,8 +177,8 @@ class ViewController: UIViewController, MainDelegate {
         cursolImages.append(cursol3ImageView)
         cursolImages.append(cursol4ImageView)
         
-        if (stepCountClass.readNowCatInfo() != "") {
-            changeCatImage(catNumber: stepCountClass.readNowCatInfo())
+        if (stepCountClass.readNowCatNumber() != "") {
+            changeCatImage(catNumber: stepCountClass.readNowCatNumber())
         }
         
         stepCountClass.startStepCount(stepCountLabel: stepCount, totalStepCountLabel: totalStepCount)

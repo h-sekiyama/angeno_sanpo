@@ -30,7 +30,7 @@ class StartViewController: UIViewController {
 //    @IBOutlet weak var cat01: UIImageView!
     @IBOutlet weak var cat01: UIButton!
     @IBAction func cat01(_ sender: Any) {
-        let storyboard: UIStoryboard = self.storyboard!
+        let storyboard: UIStoryboard = UIStoryboard(name: "ModalViewController", bundle: nil)
         let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
         modalView.catName = StepBoarderCat.boarder_01.rawValue
         modalView.catDetail = StepBoarderCatInfo.boarder_01.rawValue
@@ -38,7 +38,7 @@ class StartViewController: UIViewController {
     }
     @IBOutlet weak var cat02: UIButton!
     @IBAction func cat02(_ sender: Any) {
-        let storyboard: UIStoryboard = self.storyboard!
+        let storyboard: UIStoryboard = UIStoryboard(name: "ModalViewController", bundle: nil)
         let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
         modalView.catName = StepBoarderCat.boarder_02.rawValue
         modalView.catDetail = StepBoarderCatInfo.boarder_02.rawValue
@@ -46,7 +46,7 @@ class StartViewController: UIViewController {
     }
     @IBOutlet weak var cat03: UIButton!
     @IBAction func cat03(_ sender: Any) {
-        let storyboard: UIStoryboard = self.storyboard!
+        let storyboard: UIStoryboard = UIStoryboard(name: "ModalViewController", bundle: nil)
         let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
         modalView.catName = StepBoarderCat.boarder_03.rawValue
         modalView.catDetail = StepBoarderCatInfo.boarder_03.rawValue
@@ -54,7 +54,7 @@ class StartViewController: UIViewController {
     }
     @IBOutlet weak var cat04: UIButton!
     @IBAction func cat04(_ sender: Any) {
-        let storyboard: UIStoryboard = self.storyboard!
+        let storyboard: UIStoryboard = UIStoryboard(name: "ModalViewController", bundle: nil)
         let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
         modalView.catName = StepBoarderCat.boarder_04.rawValue
         modalView.catDetail = StepBoarderCatInfo.boarder_04.rawValue
@@ -62,7 +62,7 @@ class StartViewController: UIViewController {
     }
     @IBOutlet weak var cat05: UIButton!
     @IBAction func cat05(_ sender: Any) {
-        let storyboard: UIStoryboard = self.storyboard!
+        let storyboard: UIStoryboard = UIStoryboard(name: "ModalViewController", bundle: nil)
         let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
         modalView.catName = StepBoarderCat.boarder_05.rawValue
         modalView.catDetail = StepBoarderCatInfo.boarder_05.rawValue
@@ -70,7 +70,7 @@ class StartViewController: UIViewController {
     }
     @IBOutlet weak var cat06: UIButton!
     @IBAction func cat06(_ sender: Any) {
-        let storyboard: UIStoryboard = self.storyboard!
+        let storyboard: UIStoryboard = UIStoryboard(name: "ModalViewController", bundle: nil)
         let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
         modalView.catName = StepBoarderCat.boarder_06.rawValue
         modalView.catDetail = StepBoarderCatInfo.boarder_06.rawValue
@@ -78,7 +78,7 @@ class StartViewController: UIViewController {
     }
     @IBOutlet weak var cat07: UIButton!
     @IBAction func cat07(_ sender: Any) {
-        let storyboard: UIStoryboard = self.storyboard!
+        let storyboard: UIStoryboard = UIStoryboard(name: "ModalViewController", bundle: nil)
         let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
         modalView.catName = StepBoarderCat.boarder_07.rawValue
         modalView.catDetail = StepBoarderCatInfo.boarder_07.rawValue
@@ -86,7 +86,7 @@ class StartViewController: UIViewController {
     }
     @IBOutlet weak var cat08: UIButton!
     @IBAction func cat08(_ sender: Any) {
-        let storyboard: UIStoryboard = self.storyboard!
+        let storyboard: UIStoryboard = UIStoryboard(name: "ModalViewController", bundle: nil)
         let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
         modalView.catName = StepBoarderCat.boarder_08.rawValue
         modalView.catDetail = StepBoarderCatInfo.boarder_08.rawValue
@@ -94,7 +94,7 @@ class StartViewController: UIViewController {
     }
     @IBOutlet weak var cat09: UIButton!
     @IBAction func cat09(_ sender: Any) {
-        let storyboard: UIStoryboard = self.storyboard!
+        let storyboard: UIStoryboard = UIStoryboard(name: "ModalViewController", bundle: nil)
         let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
         modalView.catName = StepBoarderCat.boarder_09.rawValue
         modalView.catDetail = StepBoarderCatInfo.boarder_09.rawValue
@@ -102,7 +102,7 @@ class StartViewController: UIViewController {
     }
     @IBOutlet weak var cat10: UIButton!
     @IBAction func cat10(_ sender: Any) {
-        let storyboard: UIStoryboard = self.storyboard!
+        let storyboard: UIStoryboard = UIStoryboard(name: "ModalViewController", bundle: nil)
         let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
         modalView.catName = StepBoarderCat.boarder_10.rawValue
         modalView.catDetail = StepBoarderCatInfo.boarder_10.rawValue

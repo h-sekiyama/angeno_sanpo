@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Modal View Controller-->
+        <scene sceneID="ehD-0s-B1w">
+            <objects>
+                <viewController storyboardIdentifier="modal" modalPresentationStyle="overCurrentContext" id="wAS-oE-tR6" customClass="ModalViewController" customModule="sanpo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="modal" id="iX3-iq-nQY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eyh-gh-SEn">
+                                <rect key="frame" x="41.5" y="261.5" width="331" height="373"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ax-PX-Tr5">
+                                        <rect key="frame" x="19" y="115.5" width="293" height="142"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明猫の説明">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.67843137254901964" green="0.39215686274509803" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="猫の名前" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dg0-xW-DH7">
+                                        <rect key="frame" x="117" y="20" width="97.5" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" red="0.67843137249999996" green="0.3921568627" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVA-gp-Gm7">
+                                        <rect key="frame" x="111" y="329.5" width="109" height="35.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="cVA-gp-Gm7" secondAttribute="height" multiplier="296:96" id="OTy-0o-4jM"/>
+                                        </constraints>
+                                        <state key="normal" image="win_close"/>
+                                        <connections>
+                                            <action selector="closeModal:" destination="wAS-oE-tR6" eventType="touchUpInside" id="2RI-PD-qdG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.93021970990000002" blue="0.75520831349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="cVA-gp-Gm7" firstAttribute="width" secondItem="Eyh-gh-SEn" secondAttribute="width" multiplier="0.33" id="7gh-rG-2BX"/>
+                                    <constraint firstItem="9ax-PX-Tr5" firstAttribute="centerX" secondItem="Eyh-gh-SEn" secondAttribute="centerX" id="Yy1-xd-OLW"/>
+                                    <constraint firstItem="9ax-PX-Tr5" firstAttribute="width" secondItem="Eyh-gh-SEn" secondAttribute="width" multiplier="0.885196" id="bhP-jY-DKm"/>
+                                    <constraint firstAttribute="bottom" secondItem="cVA-gp-Gm7" secondAttribute="bottom" constant="8" id="oPa-0M-GUn"/>
+                                    <constraint firstAttribute="width" secondItem="Eyh-gh-SEn" secondAttribute="height" multiplier="8:9" id="osX-vM-GQR"/>
+                                    <constraint firstItem="cVA-gp-Gm7" firstAttribute="centerX" secondItem="Eyh-gh-SEn" secondAttribute="centerX" id="p46-7Z-sba"/>
+                                    <constraint firstItem="dg0-xW-DH7" firstAttribute="top" secondItem="Eyh-gh-SEn" secondAttribute="top" constant="20" id="xKC-mc-ZDu"/>
+                                    <constraint firstItem="9ax-PX-Tr5" firstAttribute="centerY" secondItem="Eyh-gh-SEn" secondAttribute="centerY" id="ya2-qt-6tl"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.79607843140000001" green="0.40993976589999997" blue="0.22683709860000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Eyh-gh-SEn" firstAttribute="width" secondItem="iX3-iq-nQY" secondAttribute="width" multiplier="0.8" id="DlO-Nc-hJO"/>
+                            <constraint firstItem="dg0-xW-DH7" firstAttribute="centerX" secondItem="fM9-HI-qK5" secondAttribute="centerX" id="Xcw-WW-NN7"/>
+                            <constraint firstItem="Eyh-gh-SEn" firstAttribute="centerX" secondItem="iX3-iq-nQY" secondAttribute="centerX" id="bio-bh-uFa"/>
+                            <constraint firstItem="Eyh-gh-SEn" firstAttribute="centerY" secondItem="iX3-iq-nQY" secondAttribute="centerY" id="y9h-Qk-vNN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fM9-HI-qK5"/>
+                    </view>
+                    <connections>
+                        <outlet property="catDetailLabel" destination="9ax-PX-Tr5" id="ykp-jO-Yca"/>
+                        <outlet property="catNameLabel" destination="dg0-xW-DH7" id="56g-JO-xln"/>
+                        <outlet property="modalView" destination="Eyh-gh-SEn" id="4f7-1w-KbQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SNA-0L-dns" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844.92753623188412" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="win_close" width="134.5" height="48"/>
+    </resources>
+</document>

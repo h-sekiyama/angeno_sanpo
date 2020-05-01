@@ -22,6 +22,33 @@ public enum StepBoarderCat: String {
     case boarder_08 = "シャム猫"
     case boarder_09 = "マヌル猫"
     case boarder_10 = "スフィンクス"
+    
+    public static func getCatName(catNumber: String) -> String {
+        switch catNumber {
+        case "01":
+            return boarder_01.rawValue
+        case "02":
+            return boarder_02.rawValue
+        case "03":
+            return boarder_03.rawValue
+        case "04":
+            return boarder_04.rawValue
+        case "05":
+            return boarder_05.rawValue
+        case "06":
+            return boarder_06.rawValue
+        case "07":
+            return boarder_07.rawValue
+        case "08":
+            return boarder_08.rawValue
+        case "09":
+            return boarder_09.rawValue
+        case "10":
+            return boarder_10.rawValue
+        default:
+            return ""
+        }
+    }
 }
 
 public enum StepBoarderCatInfo: String {
@@ -35,4 +62,31 @@ public enum StepBoarderCatInfo: String {
     case boarder_08 = "シャム猫のメス。タイが原産の猫で、高貴な血筋の家系じゃないと飼うことが許されなかった時代もあったと言う選ばれし猫。この子もとても気位が高く、絶対に他の猫や人間にこびたりしない。近所の白猫がオスに色目を使っているのを面白く思ってない。"
     case boarder_09 = "マヌルヤマネコのオス。ズングリとした体型と、耳の位置が普通の猫と比べて低い位置にあるのが特徴。日本ではとても珍しい猫。サファリパークから脱走した。"
     case boarder_10 = "スフィンクスのメス猫。とても短い産毛しか生えてないのが最大の特徴。暑いのも寒いのも苦手。実は猫専用のショッピングサイト、Nyamazonを作った猫界のカリスマ。猫の長者番付では常に上位３にゃんに入る存在。"
+    
+    public static func getCatInfo(catNumber: String) -> String {
+        switch catNumber {
+        case "01":
+            return boarder_01.rawValue
+        case "02":
+            return boarder_02.rawValue
+        case "03":
+            return boarder_03.rawValue
+        case "04":
+            return boarder_04.rawValue
+        case "05":
+            return boarder_05.rawValue
+        case "06":
+            return boarder_06.rawValue
+        case "07":
+            return boarder_07.rawValue
+        case "08":
+            return boarder_08.rawValue
+        case "09":
+            return boarder_09.rawValue
+        case "10":
+            return boarder_10.rawValue
+        default:
+            return ""
+        }
+    }
 }
