@@ -34,6 +34,8 @@ class StartViewController: UIViewController {
         let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
         modalView.catName = StepBoarderCat.boarder_01.rawValue
         modalView.catDetail = StepBoarderCatInfo.boarder_01.rawValue
+        modalView.catNumber = "01"
+        modalView.parentScreen = "start"
         self.present(modalView, animated: true, completion: nil)
     }
     @IBOutlet weak var cat02: UIButton!
@@ -42,6 +44,8 @@ class StartViewController: UIViewController {
         let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
         modalView.catName = StepBoarderCat.boarder_02.rawValue
         modalView.catDetail = StepBoarderCatInfo.boarder_02.rawValue
+        modalView.catNumber = "02"
+        modalView.parentScreen = "start"
         self.present(modalView, animated: true, completion: nil)
     }
     @IBOutlet weak var cat03: UIButton!
@@ -50,6 +54,8 @@ class StartViewController: UIViewController {
         let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
         modalView.catName = StepBoarderCat.boarder_03.rawValue
         modalView.catDetail = StepBoarderCatInfo.boarder_03.rawValue
+        modalView.catNumber = "03"
+        modalView.parentScreen = "start"
         self.present(modalView, animated: true, completion: nil)
     }
     @IBOutlet weak var cat04: UIButton!
@@ -58,6 +64,8 @@ class StartViewController: UIViewController {
         let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
         modalView.catName = StepBoarderCat.boarder_04.rawValue
         modalView.catDetail = StepBoarderCatInfo.boarder_04.rawValue
+        modalView.catNumber = "04"
+        modalView.parentScreen = "start"
         self.present(modalView, animated: true, completion: nil)
     }
     @IBOutlet weak var cat05: UIButton!
@@ -66,6 +74,8 @@ class StartViewController: UIViewController {
         let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
         modalView.catName = StepBoarderCat.boarder_05.rawValue
         modalView.catDetail = StepBoarderCatInfo.boarder_05.rawValue
+        modalView.catNumber = "05"
+        modalView.parentScreen = "start"
         self.present(modalView, animated: true, completion: nil)
     }
     @IBOutlet weak var cat06: UIButton!
@@ -74,6 +84,8 @@ class StartViewController: UIViewController {
         let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
         modalView.catName = StepBoarderCat.boarder_06.rawValue
         modalView.catDetail = StepBoarderCatInfo.boarder_06.rawValue
+        modalView.catNumber = "06"
+        modalView.parentScreen = "start"
         self.present(modalView, animated: true, completion: nil)
     }
     @IBOutlet weak var cat07: UIButton!
@@ -82,6 +94,8 @@ class StartViewController: UIViewController {
         let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
         modalView.catName = StepBoarderCat.boarder_07.rawValue
         modalView.catDetail = StepBoarderCatInfo.boarder_07.rawValue
+        modalView.catNumber = "07"
+        modalView.parentScreen = "start"
         self.present(modalView, animated: true, completion: nil)
     }
     @IBOutlet weak var cat08: UIButton!
@@ -90,6 +104,8 @@ class StartViewController: UIViewController {
         let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
         modalView.catName = StepBoarderCat.boarder_08.rawValue
         modalView.catDetail = StepBoarderCatInfo.boarder_08.rawValue
+        modalView.catNumber = "08"
+        modalView.parentScreen = "start"
         self.present(modalView, animated: true, completion: nil)
     }
     @IBOutlet weak var cat09: UIButton!
@@ -98,6 +114,8 @@ class StartViewController: UIViewController {
         let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
         modalView.catName = StepBoarderCat.boarder_09.rawValue
         modalView.catDetail = StepBoarderCatInfo.boarder_09.rawValue
+        modalView.catNumber = "09"
+        modalView.parentScreen = "start"
         self.present(modalView, animated: true, completion: nil)
     }
     @IBOutlet weak var cat10: UIButton!
@@ -106,6 +124,8 @@ class StartViewController: UIViewController {
         let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
         modalView.catName = StepBoarderCat.boarder_10.rawValue
         modalView.catDetail = StepBoarderCatInfo.boarder_10.rawValue
+        modalView.catNumber = "10"
+        modalView.parentScreen = "start"
         self.present(modalView, animated: true, completion: nil)
     }
     

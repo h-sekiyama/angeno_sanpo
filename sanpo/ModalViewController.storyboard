@@ -15,6 +15,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9uC-84-Ntn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Ouk-dz-hTc" appends="YES" id="Qct-15-tjp"/>
+                                </connections>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eyh-gh-SEn">
                                 <rect key="frame" x="41.5" y="261.5" width="331" height="373"/>
                                 <subviews>
@@ -71,12 +79,29 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zd-H8-Ie5">
+                                <rect key="frame" x="45" y="644.5" width="324" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8Zd-H8-Ie5" secondAttribute="height" multiplier="503:101" id="Uw7-7f-TZ5"/>
+                                    <constraint firstAttribute="height" constant="65" id="Wvw-MC-bH3"/>
+                                </constraints>
+                                <state key="normal" image="win_sanpo"/>
+                                <connections>
+                                    <action selector="takeCatButton:" destination="wAS-oE-tR6" eventType="touchUpInside" id="h4p-A4-mOH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="9uC-84-Ntn" firstAttribute="top" secondItem="iX3-iq-nQY" secondAttribute="top" id="Ceu-3o-BhO"/>
                             <constraint firstItem="Eyh-gh-SEn" firstAttribute="width" secondItem="iX3-iq-nQY" secondAttribute="width" multiplier="0.8" id="DlO-Nc-hJO"/>
+                            <constraint firstItem="8Zd-H8-Ie5" firstAttribute="centerX" secondItem="iX3-iq-nQY" secondAttribute="centerX" id="HV5-G9-h6c"/>
+                            <constraint firstItem="9uC-84-Ntn" firstAttribute="trailing" secondItem="fM9-HI-qK5" secondAttribute="trailing" id="LrM-Wp-rEZ"/>
+                            <constraint firstItem="8Zd-H8-Ie5" firstAttribute="top" secondItem="Eyh-gh-SEn" secondAttribute="bottom" constant="10" id="Wvd-k4-7W2"/>
                             <constraint firstItem="dg0-xW-DH7" firstAttribute="centerX" secondItem="fM9-HI-qK5" secondAttribute="centerX" id="Xcw-WW-NN7"/>
+                            <constraint firstItem="9uC-84-Ntn" firstAttribute="leading" secondItem="fM9-HI-qK5" secondAttribute="leading" id="ZSl-Bd-pwH"/>
                             <constraint firstItem="Eyh-gh-SEn" firstAttribute="centerX" secondItem="iX3-iq-nQY" secondAttribute="centerX" id="bio-bh-uFa"/>
+                            <constraint firstAttribute="bottom" secondItem="9uC-84-Ntn" secondAttribute="bottom" id="fQP-P3-3cg"/>
                             <constraint firstItem="Eyh-gh-SEn" firstAttribute="centerY" secondItem="iX3-iq-nQY" secondAttribute="centerY" id="y9h-Qk-vNN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fM9-HI-qK5"/>
@@ -85,14 +110,21 @@
                         <outlet property="catDetailLabel" destination="9ax-PX-Tr5" id="ykp-jO-Yca"/>
                         <outlet property="catNameLabel" destination="dg0-xW-DH7" id="56g-JO-xln"/>
                         <outlet property="modalView" destination="Eyh-gh-SEn" id="4f7-1w-KbQ"/>
+                        <outlet property="takeCatButton" destination="8Zd-H8-Ie5" id="YxC-JX-5rx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SNA-0L-dns" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Ouk-dz-hTc" userLabel="ModalClose">
+                    <connections>
+                        <action selector="modalClose:" destination="wAS-oE-tR6" id="L6w-kQ-MhZ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="844.92753623188412" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>
         <image name="win_close" width="134.5" height="48"/>
+        <image name="win_sanpo" width="503" height="101"/>
     </resources>
 </document>

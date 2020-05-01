@@ -4,10 +4,33 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>sanpo-test.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>sanpo.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>3E732F5A2439A883003DB97A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3E732F702439A885003DB97A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3E732F7B2439A885003DB97A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
