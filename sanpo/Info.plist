@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -55,6 +55,26 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>StepBoarder01</key>
+	<string>$(STEP_BOARDER01)</string>
+	<key>StepBoarder02</key>
+	<string>$(STEP_BOARDER02)</string>
+	<key>StepBoarder03</key>
+	<string>$(STEP_BOARDER03)</string>
+	<key>StepBoarder04</key>
+	<string>$(STEP_BOARDER04)</string>
+	<key>StepBoarder05</key>
+	<string>$(STEP_BOARDER05)</string>
+	<key>StepBoarder06</key>
+	<string>$(STEP_BOARDER06)</string>
+	<key>StepBoarder07</key>
+	<string>$(STEP_BOARDER07)</string>
+	<key>StepBoarder08</key>
+	<string>$(STEP_BOARDER08)</string>
+	<key>StepBoarder09</key>
+	<string>$(STEP_BOARDER09)</string>
+	<key>StepBoarder10</key>
+	<string>$(STEP_BOARDER10)</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

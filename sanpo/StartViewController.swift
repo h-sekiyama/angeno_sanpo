@@ -157,34 +157,34 @@ class StartViewController: UIViewController {
         let totalStepCount: Int = userDefaults.object(forKey: "SanpoTotalStepCount") as? Int ?? 0
         totalStepCountLabel.text =  "\(totalStepCount)歩"
         
-        if (totalStepCount > StepBoarder.boarder_01.rawValue) {
+        if (totalStepCount > StepBoarder().boarder_01) {
             cat01.isHidden = false
         }
-        if (totalStepCount > StepBoarder.boarder_02.rawValue) {
+        if (totalStepCount > StepBoarder().boarder_02) {
             cat02.isHidden = false
         }
-        if (totalStepCount > StepBoarder.boarder_03.rawValue) {
+        if (totalStepCount > StepBoarder().boarder_03) {
             cat03.isHidden = false
         }
-        if (totalStepCount > StepBoarder.boarder_04.rawValue) {
+        if (totalStepCount > StepBoarder().boarder_04) {
             cat04.isHidden = false
         }
-        if (totalStepCount > StepBoarder.boarder_05.rawValue) {
+        if (totalStepCount > StepBoarder().boarder_05) {
             cat05.isHidden = false
         }
-        if (totalStepCount > StepBoarder.boarder_06.rawValue) {
+        if (totalStepCount > StepBoarder().boarder_06) {
             cat06.isHidden = false
         }
-        if (totalStepCount > StepBoarder.boarder_07.rawValue) {
+        if (totalStepCount > StepBoarder().boarder_07) {
             cat07.isHidden = false
         }
-        if (totalStepCount > StepBoarder.boarder_08.rawValue) {
+        if (totalStepCount > StepBoarder().boarder_08) {
             cat08.isHidden = false
         }
-        if (totalStepCount > StepBoarder.boarder_09.rawValue) {
+        if (totalStepCount > StepBoarder().boarder_09) {
             cat09.isHidden = false
         }
-        if (totalStepCount > StepBoarder.boarder_10.rawValue) {
+        if (totalStepCount > StepBoarder().boarder_10) {
             cat10.isHidden = false
         }
     }
