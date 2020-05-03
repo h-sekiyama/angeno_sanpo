@@ -137,8 +137,7 @@ class StartViewController: UIViewController {
         // mp3音声(SOUND.mp3)の再生
         musicPlayer.playSound(name: "menuettm")
         
-        
-        cat01.isHidden = true
+        cat01.isHidden = false
         cat02.isHidden = true
         cat03.isHidden = true
         cat04.isHidden = true

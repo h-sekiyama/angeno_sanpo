@@ -1,5 +1,6 @@
 import UIKit
 
+// 猫がついて来る歩数
 struct StepBoarder {
     let boarder_01: Int = Int(Bundle.main.object(forInfoDictionaryKey: "StepBoarder01") as! String) ?? 0
     let boarder_02: Int = Int(Bundle.main.object(forInfoDictionaryKey: "StepBoarder02") as! String) ?? 0
@@ -13,6 +14,7 @@ struct StepBoarder {
     let boarder_10: Int = Int(Bundle.main.object(forInfoDictionaryKey: "StepBoarder10") as! String) ?? 0
 }
 
+// 猫の名前
 public enum StepBoarderCat: String {
     case boarder_01 = "長毛の猫"
     case boarder_02 = "黒猫"

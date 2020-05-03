@@ -7,53 +7,52 @@ class UserDefaultUtil {
     
     // userDefaultから今の歩数取得
     func readSanpStepCount() -> Int {
-       // Keyを指定して読み込み
-        let stepCount: Int = userDefaults.object(forKey: "SanpoStepCount") as? Int ?? 0
-        return stepCount
+        return userDefaults.object(forKey: "SanpoStepCount") as? Int ?? 0
     }
     
     // userDefaultに今の歩数記録
     func saveSanpoStepCount(stepCount: Int){
-       // Keyを指定して保存
        userDefaults.set(stepCount, forKey: "SanpoStepCount")
     }
     
     // userDefaultから累計の歩数取得
     func readTotalSanpStepCount() -> Int {
        // Keyを指定して読み込み
-        let totalStepCount: Int = userDefaults.object(forKey: "SanpoTotalStepCount") as? Int ?? 0
-        return totalStepCount
+        return userDefaults.object(forKey: "SanpoTotalStepCount") as? Int ?? 0
     }
     
     // userDefaultに累計の歩数記録
     func saveSanpoTotalStepCount(totalStepCount: Int){
-       // Keyを指定して保存
        userDefaults.set(totalStepCount, forKey: "SanpoTotalStepCount")
     }
     
     // userDefaultから通知表示済みフラグ取得
     func readNotificationFlag(stepBoarder: Int) -> Bool {
-       // Keyを指定して読み込み
-        let sendNotificationFlag: Bool = userDefaults.object(forKey: "SanpoNotification_\(stepBoarder)") as? Bool ?? true
-        return sendNotificationFlag
+        return userDefaults.object(forKey: "SanpoNotification_\(stepBoarder)") as? Bool ?? true
     }
     
     // userDefaultから通知表示済みフラグ記録
     func saveNotificationFlag(stepBoarder: Int){
-       // Keyを指定して保存
        userDefaults.set(false, forKey: "SanpoNotification_\(stepBoarder)")
     }
     
     // userDefaultから現在連れている猫情報を取得
     func readNowCatNumber() -> String {
-       // Keyを指定して読み込み
-        let nowCatNumber: String = userDefaults.object(forKey: "SanpoNowCatInfo") as? String ?? ""
-        return nowCatNumber
+        return userDefaults.object(forKey: "SanpoNowCatInfo") as? String ?? ""
     }
     
     // userDefaultから通知表示済みフラグ記録
     func saveNowCatNumber(nowCatNumber: String){
-       // Keyを指定して保存
-       userDefaults.set(nowCatNumber, forKey: "SanpoNowCatInfo")
+        userDefaults.set(nowCatNumber, forKey: "SanpoNowCatInfo")
+    }
+    
+    // 各猫ごとの歩数を取得
+    func readCatStep(catNumber: String) ->  Int {
+        return userDefaults.object(forKey: "SanpoCatLove_\(catNumber)") as? Int ?? 0
+    }
+    
+    // 各猫ごとの歩数を記録
+    func saveCatStep(stepCount: Int, catNumber: String){
+        userDefaults.set(stepCount, forKey: "SanpoCatLove_\(catNumber)")
     }
 }

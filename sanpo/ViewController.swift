@@ -158,15 +158,19 @@ class ViewController: UIViewController, MainDelegate {
         let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
         modalView.catName = StepBoarderCat.getCatName(catNumber: self.userDefaultUtil.readNowCatNumber())
         modalView.catDetail = StepBoarderCatInfo.getCatInfo(catNumber: self.userDefaultUtil.readNowCatNumber())
+        modalView.catNumber = self.userDefaultUtil.readNowCatNumber()
         self.present(modalView, animated: true, completion: nil)
     }
     
     func changeCatImage(catNumber: String) {
         catImage.image = UIImage(named: "cat\(catNumber)")!
+        stepCountClass.startCatStepCount()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        catImage.isHidden = true
         
         // mp3音声(SOUND.mp3)の再生
         musicPlayer.playSound(name: "brightening")
@@ -179,10 +183,13 @@ class ViewController: UIViewController, MainDelegate {
         cursolImages.append(cursol3ImageView)
         cursolImages.append(cursol4ImageView)
         
+        // 現在連れてる猫が設定されてる場合はその猫に切り替え
         if (self.userDefaultUtil.readNowCatNumber() != "") {
             changeCatImage(catNumber: self.userDefaultUtil.readNowCatNumber())
+            catImage.isHidden = false
         }
         
         stepCountClass.startStepCount(stepCountLabel: stepCount, totalStepCountLabel: totalStepCount)
+        stepCountClass.startCatStepCount()
     }
 }
