@@ -57,7 +57,6 @@ class ModalViewController:  UIViewController {
         if (gaugeBackWidth > 219) {
             gaugeBackWidth = 219
         }
-        gaugeBackWidth = 120
         gauge_back.frame = CGRect(x: gaugeXPosition + 25, y: gaugeYPosition + 12, width: gaugeBackWidth, height: gaugeHeight - 20)
     }
     
