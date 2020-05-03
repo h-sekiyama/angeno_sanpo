@@ -14,6 +14,8 @@ class ViewController: UIViewController, MainDelegate {
     var buttonStatus: [Int: ButtonStatus] = [0: .off, 1: .off, 2: .off, 3: .off, 4: .off]
     var cursolImages: [UIImageView] = []
     
+    let userDefaultUtil = UserDefaultUtil()
+    
     // 左ボタン
     @IBOutlet weak var cursol0ImageView: UIImageView!
     @IBAction func leftTap(_ sender: Any) {
@@ -154,8 +156,8 @@ class ViewController: UIViewController, MainDelegate {
     @IBAction func tapCat(_ sender: Any) {
         let storyboard: UIStoryboard = UIStoryboard(name: "ModalViewController", bundle: nil)
         let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
-        modalView.catName = StepBoarderCat.getCatName(catNumber: stepCountClass.readNowCatNumber())
-        modalView.catDetail = StepBoarderCatInfo.getCatInfo(catNumber: stepCountClass.readNowCatNumber())
+        modalView.catName = StepBoarderCat.getCatName(catNumber: self.userDefaultUtil.readNowCatNumber())
+        modalView.catDetail = StepBoarderCatInfo.getCatInfo(catNumber: self.userDefaultUtil.readNowCatNumber())
         self.present(modalView, animated: true, completion: nil)
     }
     
@@ -177,8 +179,8 @@ class ViewController: UIViewController, MainDelegate {
         cursolImages.append(cursol3ImageView)
         cursolImages.append(cursol4ImageView)
         
-        if (stepCountClass.readNowCatNumber() != "") {
-            changeCatImage(catNumber: stepCountClass.readNowCatNumber())
+        if (self.userDefaultUtil.readNowCatNumber() != "") {
+            changeCatImage(catNumber: self.userDefaultUtil.readNowCatNumber())
         }
         
         stepCountClass.startStepCount(stepCountLabel: stepCount, totalStepCountLabel: totalStepCount)

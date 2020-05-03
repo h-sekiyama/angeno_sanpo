@@ -4,6 +4,8 @@ import Toast_Swift
 
 class ModalViewController:  UIViewController {
     
+    let userDefaultUtil = UserDefaultUtil()
+    
     var catNumber: String = ""
     var catName: String = ""
     var catDetail: String = ""
@@ -12,7 +14,7 @@ class ModalViewController:  UIViewController {
     
     @IBOutlet weak var takeCatButton: UIButton!
     @IBAction func takeCatButton(_ sender: Any) {
-        stepCountClass.saveNowCatNumber(nowCatNumber: catNumber)
+        self.userDefaultUtil.saveNowCatNumber(nowCatNumber: catNumber)
         self.view.makeToast("\(catName)がついて来ました！")
     }
     

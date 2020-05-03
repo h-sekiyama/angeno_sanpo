@@ -16,6 +16,7 @@
 		3E6A0B2F2453157200D12F25 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6A0B2E2453157200D12F25 /* Start.storyboard */; };
 		3E6A0B312453158200D12F25 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A0B302453158200D12F25 /* StartViewController.swift */; };
 		3E6A0B342453211000D12F25 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6A0B332453211000D12F25 /* CoreMotion.framework */; };
+		3E6C350D245EF477006D6EBC /* UserDefaultUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C350C245EF476006D6EBC /* UserDefaultUtil.swift */; };
 		3E6F91DE24540D3400464924 /* StepCountClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6F91DD24540D3400464924 /* StepCountClass.swift */; };
 		3E6F91E22454382D00464924 /* StepBoarder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6F91E12454382D00464924 /* StepBoarder.swift */; };
 		3E732F5F2439A883003DB97A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E732F5E2439A883003DB97A /* AppDelegate.swift */; };
@@ -56,6 +57,7 @@
 		3E6A0B2E2453157200D12F25 /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
 		3E6A0B302453158200D12F25 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		3E6A0B332453211000D12F25 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		3E6C350C245EF476006D6EBC /* UserDefaultUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserDefaultUtil.swift; path = /Users/user/sites/angeno_sanpo/sanpo/UserDefaultUtil.swift; sourceTree = "<absolute>"; };
 		3E6F91DD24540D3400464924 /* StepCountClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCountClass.swift; sourceTree = "<group>"; };
 		3E6F91E12454382D00464924 /* StepBoarder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepBoarder.swift; sourceTree = "<group>"; };
 		3E732F5B2439A883003DB97A /* sanpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sanpo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +166,7 @@
 				3E7564BE245BFC810019B38A /* MusicPlayer.swift */,
 				3E7564C0245C04360019B38A /* ModalViewController.storyboard */,
 				3E6294C324554E0B00143350 /* ModalViewController.swift */,
+				3E6C350C245EF476006D6EBC /* UserDefaultUtil.swift */,
 			);
 			path = sanpo;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				3E6F91E22454382D00464924 /* StepBoarder.swift in Sources */,
 				3E6F91DE24540D3400464924 /* StepCountClass.swift in Sources */,
 				3E732F612439A883003DB97A /* SceneDelegate.swift in Sources */,
+				3E6C350D245EF477006D6EBC /* UserDefaultUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

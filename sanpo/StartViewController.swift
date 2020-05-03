@@ -3,7 +3,7 @@ import UIKit
 
 class StartViewController: UIViewController {
     
-    let musicPlayer  = MusicPlayer()
+    let musicPlayer = MusicPlayer()
     
     // Nextボタン押下時の処理
     @IBAction func goNext(_ sender: Any) {
