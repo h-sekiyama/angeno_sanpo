@@ -164,7 +164,7 @@ class ViewController: UIViewController, MainDelegate {
     
     func changeCatImage(catNumber: String) {
         catImage.image = UIImage(named: "cat\(catNumber)")!
-        stepCountClass.startCatStepCount()
+        catImage.isHidden = false
     }
     
     override func viewDidLoad() {
@@ -190,6 +190,5 @@ class ViewController: UIViewController, MainDelegate {
         }
         
         stepCountClass.startStepCount(stepCountLabel: stepCount, totalStepCountLabel: totalStepCount)
-        stepCountClass.startCatStepCount()
     }
 }

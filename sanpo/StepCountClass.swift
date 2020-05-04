@@ -18,8 +18,12 @@ class StepCountClass {
     var nowCatNumber: String = ""
     // UserDefault管理クラス
     let userDefaultUtil = UserDefaultUtil()
-    
-    var nowCatStep = 0
+    // その散歩における歩数
+    var sanpoStepCount: Int = 0
+    // その猫を連れて歩いた歩数
+    var nowCatStep: Int = 0
+    // 猫が最後に代わった時点の歩数
+    var catChangeTimeStep: Int = 0
     
     init() {
         maxStepCount = 0
@@ -29,20 +33,15 @@ class StepCountClass {
     }
 
     // 猫ごとの歩数カウント開始
-    func startCatStepCount() {
+    func startCatStepCount(catChangeTimeStep: Int, sanpoStepCount: Int) {
         self.nowCatStep = self.userDefaultUtil.readCatStep(catNumber: self.nowCatNumber)
-        pedometer.startUpdates(from: Date()) { data, error in
-            guard let data = data else { return }
-            DispatchQueue.main.async {
-                // 現在連れている猫の歩数を加算
-                if (self.nowCatNumber != "") {
-                    self.userDefaultUtil.saveCatStep(stepCount: self.nowCatStep + data.numberOfSteps.intValue, catNumber: self.nowCatNumber)
-                }
-                
-                print("現在の猫番号は\(self.nowCatNumber)")
-                print("現在の猫の歩数は\(self.userDefaultUtil.readCatStep(catNumber: self.nowCatNumber))")
-            }
+        // 現在連れている猫の歩数を加算
+        if (self.nowCatNumber != "") {
+            self.userDefaultUtil.saveCatStep(stepCount: self.nowCatStep + sanpoStepCount - catChangeTimeStep, catNumber: self.nowCatNumber)
         }
+        
+        print("現在の猫番号は\(self.nowCatNumber)")
+        print("現在の猫の歩数は\(self.userDefaultUtil.readCatStep(catNumber: self.nowCatNumber))")
     }
     
     // 通常の歩数カウント開始
@@ -53,6 +52,8 @@ class StepCountClass {
             guard let data = data else { return }
             DispatchQueue.main.async {
                 stepCountLabel.text = "いま\(data.numberOfSteps)歩"
+                self.sanpoStepCount = data.numberOfSteps.intValue
+                self.startCatStepCount(catChangeTimeStep: self.catChangeTimeStep, sanpoStepCount: self.sanpoStepCount)
                 if (self.maxStepCount < data.numberOfSteps.intValue) {
                     self.userDefaultUtil.saveSanpoStepCount(stepCount: data.numberOfSteps.intValue)
                 }
@@ -66,6 +67,7 @@ class StepCountClass {
                         self.userDefaultUtil.saveNotificationFlag(stepBoarder: 1)
                         self.userDefaultUtil.saveNowCatNumber(nowCatNumber: "01")
                         self.nowCatNumber = "01"
+                        self.catChangeTimeStep = data.numberOfSteps.intValue
                     }
                 } else if case StepBoarder().boarder_02 ... StepBoarder().boarder_03 = (data.numberOfSteps.intValue + self.totalStepCount) {
                     if (self.userDefaultUtil.readNotificationFlag(stepBoarder: 2)) {
@@ -73,6 +75,7 @@ class StepCountClass {
                         self.userDefaultUtil.saveNotificationFlag(stepBoarder: 2)
                         self.userDefaultUtil.saveNowCatNumber(nowCatNumber: "02")
                         self.nowCatNumber = "02"
+                        self.catChangeTimeStep = data.numberOfSteps.intValue
                     }
                 } else if case StepBoarder().boarder_03 ... StepBoarder().boarder_04 = (data.numberOfSteps.intValue + self.totalStepCount) {
                     if (self.userDefaultUtil.readNotificationFlag(stepBoarder: 3)) {
@@ -80,6 +83,7 @@ class StepCountClass {
                         self.userDefaultUtil.saveNotificationFlag(stepBoarder: 3)
                         self.userDefaultUtil.saveNowCatNumber(nowCatNumber: "03")
                         self.nowCatNumber = "03"
+                        self.catChangeTimeStep = data.numberOfSteps.intValue
                     }
                 } else if case StepBoarder().boarder_04 ... StepBoarder().boarder_05 = (data.numberOfSteps.intValue + self.totalStepCount) {
                     if (self.userDefaultUtil.readNotificationFlag(stepBoarder: 4)) {
@@ -87,6 +91,7 @@ class StepCountClass {
                         self.userDefaultUtil.saveNotificationFlag(stepBoarder: 4)
                         self.userDefaultUtil.saveNowCatNumber(nowCatNumber: "04")
                         self.nowCatNumber = "04"
+                        self.catChangeTimeStep = data.numberOfSteps.intValue
                     }
                 } else if case StepBoarder().boarder_05 ... StepBoarder().boarder_06 = (data.numberOfSteps.intValue + self.totalStepCount) {
                     if (self.userDefaultUtil.readNotificationFlag(stepBoarder: 5)) {
@@ -94,6 +99,7 @@ class StepCountClass {
                         self.userDefaultUtil.saveNotificationFlag(stepBoarder: 5)
                         self.userDefaultUtil.saveNowCatNumber(nowCatNumber: "05")
                         self.nowCatNumber = "05"
+                        self.catChangeTimeStep = data.numberOfSteps.intValue
                     }
                 } else if case StepBoarder().boarder_06 ... StepBoarder().boarder_07 = (data.numberOfSteps.intValue + self.totalStepCount) {
                     if (self.userDefaultUtil.readNotificationFlag(stepBoarder: 6)) {
@@ -101,6 +107,7 @@ class StepCountClass {
                         self.userDefaultUtil.saveNotificationFlag(stepBoarder: 6)
                         self.userDefaultUtil.saveNowCatNumber(nowCatNumber: "06")
                         self.nowCatNumber = "06"
+                        self.catChangeTimeStep = data.numberOfSteps.intValue
                     }
                 } else if case StepBoarder().boarder_07 ... StepBoarder().boarder_08 = (data.numberOfSteps.intValue + self.totalStepCount) {
                     if (self.userDefaultUtil.readNotificationFlag(stepBoarder: 7)) {
@@ -108,6 +115,7 @@ class StepCountClass {
                         self.userDefaultUtil.saveNotificationFlag(stepBoarder: 7)
                         self.userDefaultUtil.saveNowCatNumber(nowCatNumber: "07")
                         self.nowCatNumber = "07"
+                        self.catChangeTimeStep = data.numberOfSteps.intValue
                     }
                 } else if case StepBoarder().boarder_08 ... StepBoarder().boarder_09 = (data.numberOfSteps.intValue + self.totalStepCount) {
                     if (self.userDefaultUtil.readNotificationFlag(stepBoarder: 8)) {
@@ -115,6 +123,7 @@ class StepCountClass {
                         self.userDefaultUtil.saveNotificationFlag(stepBoarder: 8)
                         self.userDefaultUtil.saveNowCatNumber(nowCatNumber: "08")
                         self.nowCatNumber = "08"
+                        self.catChangeTimeStep = data.numberOfSteps.intValue
                     }
                 } else if case StepBoarder().boarder_09 ... StepBoarder().boarder_10 = (data.numberOfSteps.intValue + self.totalStepCount) {
                     if (self.userDefaultUtil.readNotificationFlag(stepBoarder: 9)) {
@@ -122,6 +131,7 @@ class StepCountClass {
                         self.userDefaultUtil.saveNotificationFlag(stepBoarder: 9)
                         self.userDefaultUtil.saveNowCatNumber(nowCatNumber: "09")
                         self.nowCatNumber = "09"
+                        self.catChangeTimeStep = data.numberOfSteps.intValue
                     }
                 } else if StepBoarder().boarder_10 < (data.numberOfSteps.intValue + self.totalStepCount) {
                     if (self.userDefaultUtil.readNotificationFlag(stepBoarder: 10)) {
@@ -129,6 +139,7 @@ class StepCountClass {
                         self.userDefaultUtil.saveNotificationFlag(stepBoarder: 10)
                         self.userDefaultUtil.saveNowCatNumber(nowCatNumber: "10")
                         self.nowCatNumber = "10"
+                        self.catChangeTimeStep = data.numberOfSteps.intValue
                     }
                 }
             }
