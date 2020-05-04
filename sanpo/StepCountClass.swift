@@ -45,17 +45,17 @@ class StepCountClass {
             self.userDefaultUtil.saveCatStep(stepCount: self.nowCatStep + sanpoStepCount - catChangeTimeStep - prevCatStep, catNumber: self.nowCatNumber)
             // 猫ごとの歩数が一定数以上になるとイベント発生
             if (!StepCountClass.isOpenOtherModal) {
-                if case 0 ... 30 = self.nowCatStep {
+                if case Int(CAT_EVENT_STEP) / 3 ... (Int(CAT_EVENT_STEP) / 3) * 2 = self.nowCatStep {
                     if (!userDefaultUtil.readCatEventFlag(catNumber: self.nowCatNumber, eventNumber: 0)) {
                         delegate?.talkingWithCat(eventNumber: 0, catNumber: self.nowCatNumber)
                         userDefaultUtil.saveCatEventFlag(catNumber: self.nowCatNumber, eventNumber: 0)
                     }
-                } else if case 31 ... 70 = self.nowCatStep {
+                } else if case (Int(CAT_EVENT_STEP) / 3) * 2 ... Int(CAT_EVENT_STEP) = self.nowCatStep {
                     if (!userDefaultUtil.readCatEventFlag(catNumber: self.nowCatNumber, eventNumber: 1)) {
                         delegate?.talkingWithCat(eventNumber: 1, catNumber: self.nowCatNumber)
                         userDefaultUtil.saveCatEventFlag(catNumber: self.nowCatNumber, eventNumber: 1)
                     }
-                } else if (self.nowCatStep > 70) {
+                } else if (self.nowCatStep > Int(CAT_EVENT_STEP)) {
                     if (!userDefaultUtil.readCatEventFlag(catNumber: self.nowCatNumber, eventNumber: 2)) {
                         delegate?.talkingWithCat(eventNumber: 2, catNumber: self.nowCatNumber)
                         userDefaultUtil.saveCatEventFlag(catNumber: self.nowCatNumber, eventNumber: 2)

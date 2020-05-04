@@ -55,7 +55,7 @@ class ModalViewController:  UIViewController {
         let gaugeYPosition = self.gauge.frame.minY
         
         // 好感度ゲージの幅を歩数を元に算出
-        var gaugeBackWidth = (CGFloat(userDefaultUtil.readCatStep(catNumber: self.catNumber)) / 219) * 219
+        var gaugeBackWidth = (CGFloat(userDefaultUtil.readCatStep(catNumber: self.catNumber)) / CAT_EVENT_STEP) * 219
         if (gaugeBackWidth > 219) {
             gaugeBackWidth = 219
         }

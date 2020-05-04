@@ -14,6 +14,9 @@ struct StepBoarder {
     let boarder_10: Int = Int(Bundle.main.object(forInfoDictionaryKey: "StepBoarder10") as! String) ?? 0
 }
 
+// 猫とのイベントのエンディングに必要な歩数
+public let CAT_EVENT_STEP: CGFloat = 219
+
 // 猫の名前
 public enum StepBoarderCat: String {
     case boarder_01 = "長毛の猫"
