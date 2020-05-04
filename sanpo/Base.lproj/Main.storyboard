@@ -114,9 +114,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7p-ky-dK5">
-                                <rect key="frame" x="11" y="56" width="133" height="50.333333333333343"/>
+                                <rect key="frame" x="11" y="56" width="133" height="39.666666666666657"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="U7p-ky-dK5" secondAttribute="height" multiplier="327:124" id="2kg-R3-VAD"/>
+                                    <constraint firstAttribute="width" secondItem="U7p-ky-dK5" secondAttribute="height" multiplier="336:100" id="2kg-R3-VAD"/>
                                 </constraints>
                                 <state key="normal" image="gohome"/>
                                 <connections>
@@ -220,6 +220,6 @@
         <image name="cursol_2_off" width="60" height="65.666664123535156"/>
         <image name="cursol_3_off" width="54.666667938232422" height="61.333332061767578"/>
         <image name="cursol_4_off" width="65.666664123535156" height="60"/>
-        <image name="gohome" width="124" height="41.333332061767578"/>
+        <image name="gohome" width="112" height="33.333332061767578"/>
     </resources>
 </document>
