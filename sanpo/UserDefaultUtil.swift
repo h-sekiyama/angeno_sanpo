@@ -55,4 +55,14 @@ class UserDefaultUtil {
     func saveCatStep(stepCount: Int, catNumber: String){
         userDefaults.set(stepCount, forKey: "SanpoCatLove_\(catNumber)")
     }
+    
+    // 各猫ごとのイベントを見たか管理するフラグを取得
+    func readCatEventFlag(catNumber: String, eventNumber: Int) ->  Bool {
+        return userDefaults.object(forKey: "SanpoCatEventFlag_\(catNumber)_\(String(eventNumber))") as? Bool ?? false
+    }
+    
+    // 各猫ごとのイベントを見たか管理するフラグを記録
+    func saveCatEventFlag(catNumber: String, eventNumber: Int){
+        userDefaults.set(true, forKey: "SanpoCatEventFlag_\(catNumber)_\(String(eventNumber))")
+    }
 }

@@ -5,9 +5,8 @@ class StartViewController: UIViewController {
     
     let musicPlayer = MusicPlayer()
     
-    // Nextボタン押下時の処理
+    // さんぽスタートボタン押下時の処理
     @IBAction func goNext(_ sender: Any) {
-        
         let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "main") as UIViewController
         
         mainViewController.modalPresentationStyle = .fullScreen

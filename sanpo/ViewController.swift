@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController, MainDelegate {
+class ViewController: UIViewController {
 
     let musicPlayer  = MusicPlayer()
     
@@ -78,6 +78,9 @@ class ViewController: UIViewController, MainDelegate {
     
     // 歩数管理クラス
     let stepCountClass = StepCountClass()
+    
+    // 会話管理クラス
+    let talkingCatModalViewController = TalkingCatModalViewController()
     
     // 今の歩数テキスト
     @IBOutlet weak var stepCount: UILabel!
@@ -161,12 +164,7 @@ class ViewController: UIViewController, MainDelegate {
         modalView.catNumber = self.userDefaultUtil.readNowCatNumber()
         self.present(modalView, animated: true, completion: nil)
     }
-    
-    func changeCatImage(catNumber: String) {
-        catImage.image = UIImage(named: "cat\(catNumber)")!
-        catImage.isHidden = false
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -190,5 +188,32 @@ class ViewController: UIViewController, MainDelegate {
         }
         
         stepCountClass.startStepCount(stepCountLabel: stepCount, totalStepCountLabel: totalStepCount)
+    }
+}
+
+extension ViewController: MainDelegate {
+    // 連れてる猫の画像を切替える処理
+    func changeCatImage(catNumber: String) {
+        catImage.image = UIImage(named: "cat\(catNumber)")!
+        catImage.isHidden = false
+    }
+    
+    // 猫との会話イベント発生処理
+    func talkingWithCat(eventNumber: Int, catNumber: String) {
+        let storyboard: UIStoryboard = UIStoryboard.init(name: "TalkingCatModalViewController", bundle: nil)
+        let talkingView = storyboard.instantiateViewController(withIdentifier: "talking") as! TalkingCatModalViewController
+        talkingView.delegate = self
+        talkingView.catNumber = catNumber
+        talkingView.eventNumber = eventNumber
+        musicPlayer.audioPlayer.stop()
+        musicPlayer.playSound(name: "moody")
+        self.present(talkingView, animated: false, completion: nil)
+    }
+}
+
+extension ViewController: ModalDelegate {
+    func closeTalkScreen() {
+        musicPlayer.audioPlayer.stop()
+        musicPlayer.playSound(name: "brightening")
     }
 }

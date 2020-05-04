@@ -4,6 +4,7 @@ import UIKit
 
 protocol MainDelegate: class {
     func changeCatImage(catNumber: String)
+    func talkingWithCat(eventNumber: Int, catNumber: String)
 }
 
 class StepCountClass {
@@ -24,6 +25,8 @@ class StepCountClass {
     var nowCatStep: Int = 0
     // 猫が最後に代わった時点の歩数
     var catChangeTimeStep: Int = 0
+    // 前回猫ごとの歩数をカウントする為に渡した歩数
+    var prevCatStep: Int = 0
     
     init() {
         maxStepCount = 0
@@ -37,7 +40,25 @@ class StepCountClass {
         self.nowCatStep = self.userDefaultUtil.readCatStep(catNumber: self.nowCatNumber)
         // 現在連れている猫の歩数を加算
         if (self.nowCatNumber != "") {
-            self.userDefaultUtil.saveCatStep(stepCount: self.nowCatStep + sanpoStepCount - catChangeTimeStep, catNumber: self.nowCatNumber)
+            self.userDefaultUtil.saveCatStep(stepCount: self.nowCatStep + sanpoStepCount - catChangeTimeStep - prevCatStep, catNumber: self.nowCatNumber)
+            // 猫ごとの歩数が一定数以上になるとイベント発生
+            if case 0 ... 146 = self.nowCatStep {
+                if (!userDefaultUtil.readCatEventFlag(catNumber: self.nowCatNumber, eventNumber: 0)) {
+                    delegate?.talkingWithCat(eventNumber: 0, catNumber: self.nowCatNumber)
+                    userDefaultUtil.saveCatEventFlag(catNumber: self.nowCatNumber, eventNumber: 0)
+                }
+            } else if case 147 ... 218 = self.nowCatStep {
+                if (!userDefaultUtil.readCatEventFlag(catNumber: self.nowCatNumber, eventNumber: 1)) {
+                    delegate?.talkingWithCat(eventNumber: 1, catNumber: self.nowCatNumber)
+                    userDefaultUtil.saveCatEventFlag(catNumber: self.nowCatNumber, eventNumber: 1)
+                }
+            } else if (self.nowCatStep > 219) {
+                if (!userDefaultUtil.readCatEventFlag(catNumber: self.nowCatNumber, eventNumber: 2)) {
+                    delegate?.talkingWithCat(eventNumber: 2, catNumber: self.nowCatNumber)
+                    userDefaultUtil.saveCatEventFlag(catNumber: self.nowCatNumber, eventNumber: 2)
+                }
+            }
+            prevCatStep = sanpoStepCount
         }
         
         print("現在の猫番号は\(self.nowCatNumber)")
@@ -53,7 +74,7 @@ class StepCountClass {
             DispatchQueue.main.async {
                 stepCountLabel.text = "いま\(data.numberOfSteps)歩"
                 self.sanpoStepCount = data.numberOfSteps.intValue
-                self.startCatStepCount(catChangeTimeStep: self.catChangeTimeStep, sanpoStepCount: self.sanpoStepCount)
+                self.startCatStepCount(catChangeTimeStep: 0, sanpoStepCount: self.sanpoStepCount)
                 if (self.maxStepCount < data.numberOfSteps.intValue) {
                     self.userDefaultUtil.saveSanpoStepCount(stepCount: data.numberOfSteps.intValue)
                 }

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Talking Cat Modal View Controller-->
+        <scene sceneID="gil-Ya-L0d">
+            <objects>
+                <viewController storyboardIdentifier="talking" modalPresentationStyle="overCurrentContext" id="SgF-UI-OzO" customClass="TalkingCatModalViewController" customModule="sanpo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7ag-0F-6Kn" userLabel="Modal View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat07" translatesAutoresizingMaskIntoConstraints="NO" id="REF-tz-GJo" userLabel="Cat Image">
+                                <rect key="frame" x="-150" y="282" width="714" height="714"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="REF-tz-GJo" secondAttribute="height" multiplier="1:1" id="e6N-01-9pb"/>
+                                </constraints>
+                            </imageView>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUS-en-PUR" userLabel="Text View">
+                                <rect key="frame" x="20" y="679" width="374" height="189"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yqr-B0-E6P">
+                                        <rect key="frame" x="16" y="9" width="358" height="171"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">ほけがああああああああああああああああああああほけがああああああああああああああああああああほけがああああああああああああああああああああほけがああああああああああああああああああああほけがああああああああああああああああああああほけがああああああああああああああああああああほけがああああああああああああああああああああほけがああああああああああああああああああああほけがああああああああああああああああああああほけがああああああああああああああああああああ</string>
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" size="19" name="HiraginoSans-W3"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RUS-en-PUR" secondAttribute="height" multiplier="374:189" id="zqB-Md-lXk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wi1-VY-7rE" userLabel="Tap View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Wi6-aM-qjO" appends="YES" id="5kj-t4-7zG"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="REF-tz-GJo" firstAttribute="leading" secondItem="7ag-0F-6Kn" secondAttribute="leading" constant="-150" id="8C5-E7-6nJ"/>
+                            <constraint firstAttribute="bottom" secondItem="REF-tz-GJo" secondAttribute="bottom" constant="-100" id="9Ca-bZ-grS"/>
+                            <constraint firstItem="wi1-VY-7rE" firstAttribute="centerX" secondItem="7ag-0F-6Kn" secondAttribute="centerX" id="EGs-ek-HMa"/>
+                            <constraint firstAttribute="trailing" secondItem="REF-tz-GJo" secondAttribute="trailing" constant="-150" id="KjU-sx-pOU"/>
+                            <constraint firstAttribute="bottom" secondItem="RUS-en-PUR" secondAttribute="bottom" constant="28" id="Q6k-Za-bR9"/>
+                            <constraint firstItem="RUS-en-PUR" firstAttribute="width" secondItem="7ag-0F-6Kn" secondAttribute="width" multiplier="0.903382" id="X5e-cH-Bki"/>
+                            <constraint firstItem="wi1-VY-7rE" firstAttribute="bottom" secondItem="7ag-0F-6Kn" secondAttribute="bottom" id="eDF-Ec-8R1"/>
+                            <constraint firstItem="wi1-VY-7rE" firstAttribute="leading" secondItem="7ag-0F-6Kn" secondAttribute="leading" id="fn0-Fp-oE4"/>
+                            <constraint firstItem="wi1-VY-7rE" firstAttribute="centerY" secondItem="7ag-0F-6Kn" secondAttribute="centerY" id="m9H-6s-5Wy"/>
+                            <constraint firstAttribute="trailing" secondItem="wi1-VY-7rE" secondAttribute="trailing" id="pHM-Mu-WPL"/>
+                            <constraint firstItem="RUS-en-PUR" firstAttribute="centerX" secondItem="7ag-0F-6Kn" secondAttribute="centerX" id="rbe-ka-VnA"/>
+                            <constraint firstItem="REF-tz-GJo" firstAttribute="centerX" secondItem="7ag-0F-6Kn" secondAttribute="centerX" id="rgw-Xp-93W"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TWq-WH-WkR"/>
+                    </view>
+                    <connections>
+                        <outlet property="catImage" destination="REF-tz-GJo" id="9Eu-Gw-UGS"/>
+                        <outlet property="catTalkingText" destination="Yqr-B0-E6P" id="t6J-cH-bBo"/>
+                        <outlet property="modalView" destination="7ag-0F-6Kn" id="n8d-Re-MT2"/>
+                        <outlet property="textView" destination="RUS-en-PUR" id="nfV-wo-jrZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rZk-uG-ypW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Wi6-aM-qjO">
+                    <connections>
+                        <action selector="screenTap:" destination="SgF-UI-OzO" id="QTf-Su-guY"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cat07" width="418.5" height="418.5"/>
+    </resources>
+</document>

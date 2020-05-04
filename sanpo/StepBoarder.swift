@@ -94,3 +94,122 @@ public enum StepBoarderCatInfo: String {
         }
     }
 }
+
+public func getCatTalk(catNumber: String, eventNumber: Int) -> [String] {
+    let boarder_01 = [["好きだにゃ", "良いにゃ", "活かすニャ"],
+                      ["てめえ", "ぶちころすぞ", "ああ？"],
+                      ["良いぞ！", "この", "バカが！"]]
+    let boarder_02 = [["", "", ""],
+                      ["", "", ""],
+                      ["", "", ""]]
+    let boarder_03 = [["", "", ""],
+                      ["", "", ""],
+                      ["", "", ""]]
+    let boarder_04 = [["", "", ""],
+                      ["", "", ""],
+                      ["", "", ""]]
+    let boarder_05 = [["", "", ""],
+                      ["", "", ""],
+                      ["", "", ""]]
+    let boarder_06 = [["", "", ""],
+                      ["", "", ""],
+                      ["", "", ""]]
+    let boarder_07 = [["", "", ""],
+                      ["", "", ""],
+                      ["", "", ""]]
+    let boarder_08 = [["", "", ""],
+                      ["", "", ""],
+                      ["", "", ""]]
+    let boarder_09 = [["", "", ""],
+                      ["", "", ""],
+                      ["", "", ""]]
+    let boarder_10 = [["", "", ""],
+                      ["", "", ""],
+                      ["", "", ""]]
+    
+    switch catNumber {
+    case "01":
+        if (eventNumber == 0) {
+            return boarder_01[0]
+        } else if (eventNumber == 1) {
+            return boarder_01[1]
+        } else if (eventNumber == 2) {
+            return boarder_01[2]
+        }
+    case "02":
+        if (eventNumber == 0) {
+            return boarder_02[0]
+        } else if (eventNumber == 1) {
+            return boarder_02[1]
+        } else if (eventNumber == 2) {
+            return boarder_02[2]
+        }
+    case "03":
+        if (eventNumber == 0) {
+            return boarder_03[0]
+        } else if (eventNumber == 1) {
+            return boarder_03[1]
+        } else if (eventNumber == 2) {
+            return boarder_03[2]
+        }
+    case "04":
+        if (eventNumber == 0) {
+            return boarder_04[0]
+        } else if (eventNumber == 1) {
+            return boarder_04[1]
+        } else if (eventNumber == 2) {
+            return boarder_04[2]
+        }
+    case "05":
+        if (eventNumber == 0) {
+            return boarder_05[0]
+        } else if (eventNumber == 1) {
+            return boarder_05[1]
+        } else if (eventNumber == 2) {
+            return boarder_05[2]
+        }
+    case "06":
+        if (eventNumber == 0) {
+            return boarder_06[0]
+        } else if (eventNumber == 1) {
+            return boarder_06[1]
+        } else if (eventNumber == 2) {
+            return boarder_06[2]
+        }
+    case "07":
+        if (eventNumber == 0) {
+            return boarder_07[0]
+        } else if (eventNumber == 1) {
+            return boarder_07[1]
+        } else if (eventNumber == 2) {
+            return boarder_07[2]
+        }
+    case "08":
+        if (eventNumber == 0) {
+            return boarder_08[0]
+        } else if (eventNumber == 1) {
+            return boarder_08[1]
+        } else if (eventNumber == 2) {
+            return boarder_08[2]
+        }
+    case "09":
+        if (eventNumber == 0) {
+            return boarder_09[0]
+        } else if (eventNumber == 1) {
+            return boarder_09[1]
+        } else if (eventNumber == 2) {
+            return boarder_09[2]
+        }
+    case "10":
+        if (eventNumber == 0) {
+            return boarder_10[0]
+        } else if (eventNumber == 1) {
+            return boarder_10[1]
+        } else if (eventNumber == 2) {
+            return boarder_10[2]
+        }
+    default:
+        return [""]
+    }
+    return [""]
+}

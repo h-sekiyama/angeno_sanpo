@@ -17,6 +17,9 @@
 		3E6A0B312453158200D12F25 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A0B302453158200D12F25 /* StartViewController.swift */; };
 		3E6A0B342453211000D12F25 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6A0B332453211000D12F25 /* CoreMotion.framework */; };
 		3E6C3511245F0962006D6EBC /* UserDefaultUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C3510245F0962006D6EBC /* UserDefaultUtil.swift */; };
+		3E6C3513245FC2A5006D6EBC /* TalkingCatModalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6C3512245FC2A5006D6EBC /* TalkingCatModalViewController.storyboard */; };
+		3E6C3515245FC2CD006D6EBC /* TalkingCatModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C3514245FC2CD006D6EBC /* TalkingCatModalViewController.swift */; };
+		3E6C3517245FCFEA006D6EBC /* moody.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3E6C3516245FCFEA006D6EBC /* moody.mp3 */; };
 		3E6F91DE24540D3400464924 /* StepCountClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6F91DD24540D3400464924 /* StepCountClass.swift */; };
 		3E6F91E22454382D00464924 /* StepBoarder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6F91E12454382D00464924 /* StepBoarder.swift */; };
 		3E732F5F2439A883003DB97A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E732F5E2439A883003DB97A /* AppDelegate.swift */; };
@@ -58,6 +61,9 @@
 		3E6A0B302453158200D12F25 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		3E6A0B332453211000D12F25 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		3E6C3510245F0962006D6EBC /* UserDefaultUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultUtil.swift; sourceTree = "<group>"; };
+		3E6C3512245FC2A5006D6EBC /* TalkingCatModalViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TalkingCatModalViewController.storyboard; sourceTree = "<group>"; };
+		3E6C3514245FC2CD006D6EBC /* TalkingCatModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingCatModalViewController.swift; sourceTree = "<group>"; };
+		3E6C3516245FCFEA006D6EBC /* moody.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = moody.mp3; path = ../../../Desktop/moody.mp3; sourceTree = "<group>"; };
 		3E6F91DD24540D3400464924 /* StepCountClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCountClass.swift; sourceTree = "<group>"; };
 		3E6F91E12454382D00464924 /* StepBoarder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepBoarder.swift; sourceTree = "<group>"; };
 		3E732F5B2439A883003DB97A /* sanpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sanpo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,11 +158,13 @@
 			children = (
 				3E012EEB245877E00057C582 /* menuettm.mp3 */,
 				3E012EE5245870970057C582 /* brightening.mp3 */,
+				3E6C3516245FCFEA006D6EBC /* moody.mp3 */,
 				3E732F672439A885003DB97A /* Assets.xcassets */,
 				3E732F6C2439A885003DB97A /* Info.plist */,
 				3E732F5E2439A883003DB97A /* AppDelegate.swift */,
 				3E732F602439A883003DB97A /* SceneDelegate.swift */,
 				3E012EDD2455DF840057C582 /* LaunchScreen.storyboard */,
+				3E6C3510245F0962006D6EBC /* UserDefaultUtil.swift */,
 				3E6A0B2E2453157200D12F25 /* Start.storyboard */,
 				3E6A0B302453158200D12F25 /* StartViewController.swift */,
 				3E732F642439A883003DB97A /* Main.storyboard */,
@@ -166,7 +174,8 @@
 				3E7564BE245BFC810019B38A /* MusicPlayer.swift */,
 				3E7564C0245C04360019B38A /* ModalViewController.storyboard */,
 				3E6294C324554E0B00143350 /* ModalViewController.swift */,
-				3E6C3510245F0962006D6EBC /* UserDefaultUtil.swift */,
+				3E6C3512245FC2A5006D6EBC /* TalkingCatModalViewController.storyboard */,
+				3E6C3514245FC2CD006D6EBC /* TalkingCatModalViewController.swift */,
 			);
 			path = sanpo;
 			sourceTree = "<group>";
@@ -313,9 +322,11 @@
 			files = (
 				3E6A0B2F2453157200D12F25 /* Start.storyboard in Resources */,
 				3E7564C1245C04360019B38A /* ModalViewController.storyboard in Resources */,
+				3E6C3517245FCFEA006D6EBC /* moody.mp3 in Resources */,
 				3E012EE6245870970057C582 /* brightening.mp3 in Resources */,
 				3E012EDE2455DF840057C582 /* LaunchScreen.storyboard in Resources */,
 				3E012EEC245877E00057C582 /* menuettm.mp3 in Resources */,
+				3E6C3513245FC2A5006D6EBC /* TalkingCatModalViewController.storyboard in Resources */,
 				3E732F682439A885003DB97A /* Assets.xcassets in Resources */,
 				3E732F662439A883003DB97A /* Main.storyboard in Resources */,
 			);
@@ -451,6 +462,7 @@
 				3E7564BF245BFC810019B38A /* MusicPlayer.swift in Sources */,
 				3E732F5F2439A883003DB97A /* AppDelegate.swift in Sources */,
 				3E6F91E22454382D00464924 /* StepBoarder.swift in Sources */,
+				3E6C3515245FC2CD006D6EBC /* TalkingCatModalViewController.swift in Sources */,
 				3E6F91DE24540D3400464924 /* StepCountClass.swift in Sources */,
 				3E732F612439A883003DB97A /* SceneDelegate.swift in Sources */,
 				3E6C3511245F0962006D6EBC /* UserDefaultUtil.swift in Sources */,
