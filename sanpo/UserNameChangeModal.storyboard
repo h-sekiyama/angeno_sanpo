@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User Name Change Modal-->
+        <scene sceneID="ZU9-ur-wbc">
+            <objects>
+                <viewController storyboardIdentifier="changeName" modalPresentationStyle="overCurrentContext" id="vnR-NU-Im7" customClass="UserNameChangeModal" customModule="sanpo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pqH-Rc-bWH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bUX-0B-d2l" userLabel="Overlay">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ZvH-fE-DS9" appends="YES" id="f4Y-WW-29z"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" id="zhb-X7-VWN" userLabel="Modal View">
+                                <rect key="frame" x="41" y="297" width="331" height="257"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="あなたの名前" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4J0-Cs-pdf">
+                                        <rect key="frame" x="92.5" y="20" width="146" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" red="0.67843137249999996" green="0.3921568627" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tm1-14-M2z">
+                                        <rect key="frame" x="111" y="213.5" width="109" height="35.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Tm1-14-M2z" secondAttribute="height" multiplier="296:96" id="h1U-GN-21A"/>
+                                        </constraints>
+                                        <state key="normal" image="win_close"/>
+                                        <connections>
+                                            <action selector="modalCloseButton:" destination="vnR-NU-Im7" eventType="touchUpInside" id="n4c-RS-AgB"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G0l-mF-9M4">
+                                        <rect key="frame" x="19" y="105" width="293" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="y1D-z2-M5s"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="nameInputAction:" destination="vnR-NU-Im7" eventType="editingDidEnd" id="O9E-61-bCW"/>
+                                            <action selector="nameInputAction:" destination="vnR-NU-Im7" eventType="touchUpInside" id="Wag-6X-ewo"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6W-fG-aUy">
+                                        <rect key="frame" x="41" y="69" width="250" height="19"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="あなたの名前を教えてください">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.67843137254901964" green="0.39215686274509803" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="17" name=".HiraKakuInterface-W3"/>
+                                                    <font key="NSOriginalFont" metaFont="system" size="17"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="※最大5文字" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NT3-qJ-ph2">
+                                        <rect key="frame" x="120.5" y="147" width="90" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.93021970990000002" blue="0.75520831349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="4J0-Cs-pdf" firstAttribute="centerX" secondItem="zhb-X7-VWN" secondAttribute="centerX" id="09t-DR-l7X"/>
+                                    <constraint firstAttribute="bottom" secondItem="Tm1-14-M2z" secondAttribute="bottom" constant="8" id="7ez-7j-3tH"/>
+                                    <constraint firstItem="L6W-fG-aUy" firstAttribute="centerX" secondItem="zhb-X7-VWN" secondAttribute="centerX" id="BWV-8r-Js8"/>
+                                    <constraint firstItem="L6W-fG-aUy" firstAttribute="width" secondItem="zhb-X7-VWN" secondAttribute="width" multiplier="0.885196" id="ESe-bv-KeI"/>
+                                    <constraint firstItem="G0l-mF-9M4" firstAttribute="top" secondItem="L6W-fG-aUy" secondAttribute="bottom" constant="17" id="GLt-yl-THt"/>
+                                    <constraint firstItem="NT3-qJ-ph2" firstAttribute="centerX" secondItem="zhb-X7-VWN" secondAttribute="centerX" id="MPr-em-rOQ"/>
+                                    <constraint firstItem="Tm1-14-M2z" firstAttribute="centerX" secondItem="zhb-X7-VWN" secondAttribute="centerX" id="RIt-7i-nxQ"/>
+                                    <constraint firstItem="Tm1-14-M2z" firstAttribute="top" secondItem="G0l-mF-9M4" secondAttribute="bottom" constant="74.5" id="Stj-LY-sYH"/>
+                                    <constraint firstItem="NT3-qJ-ph2" firstAttribute="top" secondItem="G0l-mF-9M4" secondAttribute="bottom" constant="8" id="VQN-xg-J60"/>
+                                    <constraint firstItem="4J0-Cs-pdf" firstAttribute="top" secondItem="zhb-X7-VWN" secondAttribute="top" constant="20" id="Zx9-oq-T8T"/>
+                                    <constraint firstItem="G0l-mF-9M4" firstAttribute="width" secondItem="zhb-X7-VWN" secondAttribute="width" multiplier="0.885196" id="cPx-8m-Xtv"/>
+                                    <constraint firstItem="L6W-fG-aUy" firstAttribute="top" secondItem="4J0-Cs-pdf" secondAttribute="bottom" constant="20" id="eOj-zZ-ZlR"/>
+                                    <constraint firstItem="G0l-mF-9M4" firstAttribute="centerX" secondItem="zhb-X7-VWN" secondAttribute="centerX" id="g4u-qL-ulW"/>
+                                    <constraint firstItem="Tm1-14-M2z" firstAttribute="width" secondItem="zhb-X7-VWN" secondAttribute="width" multiplier="0.33" id="sde-oj-1qm"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="LzX-ML-YUP"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.79607843140000001" green="0.40993976589999997" blue="0.22683709860000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bUX-0B-d2l" firstAttribute="leading" secondItem="L65-04-uj8" secondAttribute="leading" id="JOc-Zs-5r4"/>
+                            <constraint firstAttribute="bottom" secondItem="bUX-0B-d2l" secondAttribute="bottom" id="SUY-2e-QRI"/>
+                            <constraint firstItem="bUX-0B-d2l" firstAttribute="top" secondItem="pqH-Rc-bWH" secondAttribute="top" id="eGg-3K-cWS"/>
+                            <constraint firstItem="bUX-0B-d2l" firstAttribute="trailing" secondItem="L65-04-uj8" secondAttribute="trailing" id="isg-7T-mT4"/>
+                            <constraint firstItem="bUX-0B-d2l" firstAttribute="centerY" secondItem="pqH-Rc-bWH" secondAttribute="centerY" id="jOd-zd-JHB"/>
+                            <constraint firstItem="bUX-0B-d2l" firstAttribute="centerX" secondItem="pqH-Rc-bWH" secondAttribute="centerX" id="zPa-41-1tu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="L65-04-uj8"/>
+                    </view>
+                    <connections>
+                        <outlet property="modalView" destination="zhb-X7-VWN" id="iH0-he-Cof"/>
+                        <outlet property="nameInputArea" destination="G0l-mF-9M4" id="ME4-Kn-Iu6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="voI-Xf-NMq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ZvH-fE-DS9" userLabel="Modal Close">
+                    <connections>
+                        <action selector="modalClose:" destination="vnR-NU-Im7" id="Wxt-IX-EU6"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="231.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="win_close" width="134.5" height="48"/>
+    </resources>
+</document>

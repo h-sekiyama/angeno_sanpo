@@ -168,11 +168,19 @@
                                             <action selector="cat01:" destination="9By-fB-vPI" eventType="touchUpInside" id="vl7-gp-gS3"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esP-Xc-4FK">
+                                        <rect key="frame" x="313" y="125" width="92" height="30"/>
+                                        <state key="normal" title="名前を変える"/>
+                                        <connections>
+                                            <action selector="changeUserName:" destination="9By-fB-vPI" eventType="touchUpInside" id="1q1-qE-1is"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="TNG-Aj-lw9" firstAttribute="leading" secondItem="hEG-x3-P7B" secondAttribute="leading" constant="10" id="3fb-D0-1Ec"/>
                                     <constraint firstItem="CP5-5n-CDM" firstAttribute="width" secondItem="hEG-x3-P7B" secondAttribute="width" multiplier="0.8" id="AAV-97-GN6"/>
+                                    <constraint firstItem="esP-Xc-4FK" firstAttribute="top" secondItem="TNG-Aj-lw9" secondAttribute="bottom" constant="2.5" id="EeR-SX-61S"/>
                                     <constraint firstItem="TNG-Aj-lw9" firstAttribute="top" secondItem="hEG-x3-P7B" secondAttribute="top" constant="30" id="NsY-36-Pkg"/>
                                     <constraint firstAttribute="bottom" secondItem="CP5-5n-CDM" secondAttribute="bottom" constant="20" id="OaJ-vH-39x"/>
                                     <constraint firstItem="CP5-5n-CDM" firstAttribute="centerX" secondItem="hEG-x3-P7B" secondAttribute="centerX" id="VbS-OY-Ud7"/>
@@ -180,6 +188,7 @@
                                     <constraint firstItem="31e-Xe-hnP" firstAttribute="top" secondItem="TNG-Aj-lw9" secondAttribute="top" constant="20" id="aPf-n5-uNk"/>
                                     <constraint firstItem="GCw-b3-Xok" firstAttribute="top" secondItem="TNG-Aj-lw9" secondAttribute="top" constant="20" id="bXr-Fa-yKx"/>
                                     <constraint firstItem="TNG-Aj-lw9" firstAttribute="bottom" secondItem="kGE-3R-C9H" secondAttribute="bottom" constant="20" id="fga-Th-vGq"/>
+                                    <constraint firstAttribute="trailing" secondItem="esP-Xc-4FK" secondAttribute="trailing" constant="9" id="glq-V9-QAf"/>
                                     <constraint firstItem="TNG-Aj-lw9" firstAttribute="trailing" secondItem="nKH-uW-0SR" secondAttribute="trailing" constant="40" id="mEZ-TU-NUF"/>
                                     <constraint firstItem="31e-Xe-hnP" firstAttribute="leading" secondItem="hEG-x3-P7B" secondAttribute="leading" constant="42" id="mfR-ko-7sB"/>
                                     <constraint firstItem="kGE-3R-C9H" firstAttribute="leading" secondItem="hEG-x3-P7B" secondAttribute="leading" constant="42" id="reD-Hj-zjR"/>

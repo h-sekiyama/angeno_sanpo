@@ -130,6 +130,13 @@ class StartViewController: UIViewController {
     
     @IBOutlet weak var homeImage: UIImageView!
     
+    // 名前変更ボタンタップ
+    @IBAction func changeUserName(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard.init(name: "UserNameChangeModal", bundle: nil)
+        let nameChangeModalView = storyboard.instantiateViewController(withIdentifier: "changeName") as! UserNameChangeModal
+        self.present(nameChangeModalView, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
                 

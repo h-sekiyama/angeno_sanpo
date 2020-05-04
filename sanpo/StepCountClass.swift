@@ -27,6 +27,8 @@ class StepCountClass {
     var catChangeTimeStep: Int = 0
     // 前回猫ごとの歩数をカウントする為に渡した歩数
     var prevCatStep: Int = 0
+    // 他のモーダルを開いてるかどうか管理するフラグ
+    static var isOpenOtherModal: Bool = false
     
     init() {
         maxStepCount = 0
@@ -42,20 +44,22 @@ class StepCountClass {
         if (self.nowCatNumber != "") {
             self.userDefaultUtil.saveCatStep(stepCount: self.nowCatStep + sanpoStepCount - catChangeTimeStep - prevCatStep, catNumber: self.nowCatNumber)
             // 猫ごとの歩数が一定数以上になるとイベント発生
-            if case 0 ... 146 = self.nowCatStep {
-                if (!userDefaultUtil.readCatEventFlag(catNumber: self.nowCatNumber, eventNumber: 0)) {
-                    delegate?.talkingWithCat(eventNumber: 0, catNumber: self.nowCatNumber)
-                    userDefaultUtil.saveCatEventFlag(catNumber: self.nowCatNumber, eventNumber: 0)
-                }
-            } else if case 147 ... 218 = self.nowCatStep {
-                if (!userDefaultUtil.readCatEventFlag(catNumber: self.nowCatNumber, eventNumber: 1)) {
-                    delegate?.talkingWithCat(eventNumber: 1, catNumber: self.nowCatNumber)
-                    userDefaultUtil.saveCatEventFlag(catNumber: self.nowCatNumber, eventNumber: 1)
-                }
-            } else if (self.nowCatStep > 219) {
-                if (!userDefaultUtil.readCatEventFlag(catNumber: self.nowCatNumber, eventNumber: 2)) {
-                    delegate?.talkingWithCat(eventNumber: 2, catNumber: self.nowCatNumber)
-                    userDefaultUtil.saveCatEventFlag(catNumber: self.nowCatNumber, eventNumber: 2)
+            if (!StepCountClass.isOpenOtherModal) {
+                if case 0 ... 30 = self.nowCatStep {
+                    if (!userDefaultUtil.readCatEventFlag(catNumber: self.nowCatNumber, eventNumber: 0)) {
+                        delegate?.talkingWithCat(eventNumber: 0, catNumber: self.nowCatNumber)
+                        userDefaultUtil.saveCatEventFlag(catNumber: self.nowCatNumber, eventNumber: 0)
+                    }
+                } else if case 31 ... 70 = self.nowCatStep {
+                    if (!userDefaultUtil.readCatEventFlag(catNumber: self.nowCatNumber, eventNumber: 1)) {
+                        delegate?.talkingWithCat(eventNumber: 1, catNumber: self.nowCatNumber)
+                        userDefaultUtil.saveCatEventFlag(catNumber: self.nowCatNumber, eventNumber: 1)
+                    }
+                } else if (self.nowCatStep > 70) {
+                    if (!userDefaultUtil.readCatEventFlag(catNumber: self.nowCatNumber, eventNumber: 2)) {
+                        delegate?.talkingWithCat(eventNumber: 2, catNumber: self.nowCatNumber)
+                        userDefaultUtil.saveCatEventFlag(catNumber: self.nowCatNumber, eventNumber: 2)
+                    }
                 }
             }
             prevCatStep = sanpoStepCount

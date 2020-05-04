@@ -157,6 +157,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var catImage: UIImageView!
     
     @IBAction func tapCat(_ sender: Any) {
+        StepCountClass.isOpenOtherModal = true
         let storyboard: UIStoryboard = UIStoryboard(name: "ModalViewController", bundle: nil)
         let modalView = storyboard.instantiateViewController(withIdentifier: "modal") as! ModalViewController
         modalView.catName = StepBoarderCat.getCatName(catNumber: self.userDefaultUtil.readNowCatNumber())
