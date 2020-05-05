@@ -24,16 +24,15 @@
                             <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUS-en-PUR" userLabel="Text View">
                                 <rect key="frame" x="20" y="679" width="374" height="189"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yqr-B0-E6P">
-                                        <rect key="frame" x="16" y="9" width="343" height="171"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yqr-B0-E6P">
+                                        <rect key="frame" x="15" y="9" width="344" height="171"/>
                                         <attributedString key="attributedText">
                                             <fragment>
                                                 <string key="content">ほけがああああああああああああああああああああほけがああああああああああああああああああああほけがああああああああああああああああああああほけがああああああああああああああああああああほけがああああああああああああああああああああほけがああああああああああああああああああああほけがああああああああああああああああああああほけがああああああああああああああああああああほけがああああああああああああああああああああほけがああああああああああああああああああああ</string>
                                                 <attributes>
                                                     <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <font key="NSFont" size="19" name="HiraginoSans-W3"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    <font key="NSFont" size="15" name="HiraginoSans-W3"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -42,6 +41,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Yqr-B0-E6P" secondAttribute="trailing" constant="15" id="3cp-HQ-rUf"/>
+                                    <constraint firstItem="Yqr-B0-E6P" firstAttribute="top" secondItem="RUS-en-PUR" secondAttribute="top" constant="9" id="9Uq-5L-PiT"/>
+                                    <constraint firstAttribute="bottom" secondItem="Yqr-B0-E6P" secondAttribute="bottom" constant="9" id="RBS-Np-Hbc"/>
+                                    <constraint firstItem="Yqr-B0-E6P" firstAttribute="leading" secondItem="RUS-en-PUR" secondAttribute="leading" constant="15" id="gYh-JI-GLU"/>
+                                    <constraint firstItem="Yqr-B0-E6P" firstAttribute="width" secondItem="RUS-en-PUR" secondAttribute="width" multiplier="0.919786" id="iVK-iu-hAD"/>
                                     <constraint firstAttribute="width" secondItem="RUS-en-PUR" secondAttribute="height" multiplier="374:189" id="zqB-Md-lXk"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -66,6 +70,7 @@
                             <constraint firstItem="wi1-VY-7rE" firstAttribute="centerX" secondItem="7ag-0F-6Kn" secondAttribute="centerX" id="EGs-ek-HMa"/>
                             <constraint firstAttribute="trailing" secondItem="REF-tz-GJo" secondAttribute="trailing" constant="-150" id="KjU-sx-pOU"/>
                             <constraint firstAttribute="bottom" secondItem="RUS-en-PUR" secondAttribute="bottom" constant="28" id="Q6k-Za-bR9"/>
+                            <constraint firstItem="wi1-VY-7rE" firstAttribute="width" secondItem="RUS-en-PUR" secondAttribute="width" multiplier="1.10695" id="U35-DD-3c7"/>
                             <constraint firstItem="RUS-en-PUR" firstAttribute="width" secondItem="7ag-0F-6Kn" secondAttribute="width" multiplier="0.903382" id="X5e-cH-Bki"/>
                             <constraint firstItem="wi1-VY-7rE" firstAttribute="bottom" secondItem="7ag-0F-6Kn" secondAttribute="bottom" id="eDF-Ec-8R1"/>
                             <constraint firstItem="wi1-VY-7rE" firstAttribute="leading" secondItem="7ag-0F-6Kn" secondAttribute="leading" id="fn0-Fp-oE4"/>

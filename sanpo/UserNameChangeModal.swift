@@ -46,8 +46,8 @@ class UserNameChangeModal: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         //キーボードをしまう
         self.view.endEditing(true)
-        userDefaultUtil.saveUserName(userName: nameInputArea.text ?? "奴隷")
-        self.view.makeToast("名前を\(nameInputArea.text ?? "奴隷")に変更しました！")
+        userDefaultUtil.saveUserName(userName: nameInputArea.text ?? "どれい")
+        self.view.makeToast("名前を\(nameInputArea.text ?? "どれい")に変更しました！")
         return false
     }
     

@@ -201,6 +201,7 @@ extension ViewController: MainDelegate {
     
     // 猫との会話イベント発生処理
     func talkingWithCat(eventNumber: Int, catNumber: String) {
+        StepCountClass.isOpenOtherModal = true
         let storyboard: UIStoryboard = UIStoryboard.init(name: "TalkingCatModalViewController", bundle: nil)
         let talkingView = storyboard.instantiateViewController(withIdentifier: "talking") as! TalkingCatModalViewController
         talkingView.delegate = self
@@ -216,5 +217,6 @@ extension ViewController: ModalDelegate {
     func closeTalkScreen() {
         musicPlayer.audioPlayer.stop()
         musicPlayer.playSound(name: "brightening")
+        StepCountClass.isOpenOtherModal = false
     }
 }
