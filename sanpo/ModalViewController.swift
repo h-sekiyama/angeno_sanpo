@@ -19,7 +19,7 @@ class ModalViewController:  UIViewController {
     @IBOutlet weak var takeCatButton: UIButton!
     @IBAction func takeCatButton(_ sender: Any) {
         self.userDefaultUtil.saveNowCatNumber(nowCatNumber: catNumber)
-        self.view.makeToast("\(catName)がついて来ました！")
+        self.view.makeToast("\(catName)を一緒に連れて行きます")
     }
     
     @IBOutlet weak var catNameLabel: UILabel!
