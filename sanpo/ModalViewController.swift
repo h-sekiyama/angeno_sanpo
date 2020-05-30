@@ -42,8 +42,6 @@ class ModalViewController:  UIViewController {
         
         if (parentScreen != "start") {
             takeCatButton.isHidden = true
-//            gauge.isHidden = true
-//            gauge_back.isHidden = true
         }
         
         /// 以下、好感度ゲージ描画処理

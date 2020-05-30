@@ -79,9 +79,6 @@ class ViewController: UIViewController {
     // 歩数管理クラス
     let stepCountClass = StepCountClass()
     
-    // 会話管理クラス
-    let talkingCatModalViewController = TalkingCatModalViewController()
-    
     // 今の歩数テキスト
     @IBOutlet weak var stepCount: UILabel!
     

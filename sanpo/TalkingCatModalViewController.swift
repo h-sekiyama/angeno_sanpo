@@ -32,7 +32,7 @@ class  TalkingCatModalViewController: UIViewController {
     // 今喋ってるセリフの番号
     var nowTalkingTextNum: Int = 0
     
-    override func  viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)

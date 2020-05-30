@@ -24,10 +24,10 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zhb-X7-VWN" userLabel="Modal View">
-                                <rect key="frame" x="20" y="316" width="374" height="264"/>
+                                <rect key="frame" x="20" y="315.5" width="374" height="265"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tm1-14-M2z">
-                                        <rect key="frame" x="125.5" y="213.5" width="123" height="40.5"/>
+                                        <rect key="frame" x="125.5" y="215" width="123" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Tm1-14-M2z" secondAttribute="height" multiplier="296:96" id="h1U-GN-21A"/>
                                         </constraints>
@@ -54,7 +54,7 @@
                                             <fragment content="あなたの名前を教えてください">
                                                 <attributes>
                                                     <color key="NSColor" red="0.67843137254901964" green="0.39215686274509803" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <font key="NSFont" size="17" name=".HiraKakuInterface-W3"/>
+                                                    <font key="NSFont" metaFont="system" size="17"/>
                                                     <font key="NSOriginalFont" metaFont="system" size="17"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
@@ -63,7 +63,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="※最大5文字" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NT3-qJ-ph2">
-                                        <rect key="frame" x="150" y="147" width="74.5" height="17"/>
+                                        <rect key="frame" x="150" y="148.5" width="74.5" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
