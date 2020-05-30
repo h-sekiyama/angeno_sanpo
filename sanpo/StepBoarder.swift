@@ -15,7 +15,7 @@ struct StepBoarder {
 }
 
 // 猫とのイベントのエンディングに必要な歩数
-public let CAT_EVENT_STEP: CGFloat = 9999
+public let CAT_EVENT_STEP: Int = Int(Bundle.main.object(forInfoDictionaryKey: "EndingStep") as! String) ?? 0
 
 // 猫の名前
 public enum StepBoarderCat: String {
