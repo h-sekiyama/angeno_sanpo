@@ -17,9 +17,11 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>EndingStep</key>
+	<string>$(ENDING_STEP)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSMotionUsageDescription</key>
@@ -44,8 +46,6 @@
 	<string>$(STEP_BOARDER09)</string>
 	<key>StepBoarder10</key>
 	<string>$(STEP_BOARDER10)</string>
-	<key>EndingStep</key>
-	<string>$(ENDING_STEP)</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
