@@ -134,14 +134,18 @@ class ModalViewController:  UIViewController {
         gauge_back.translatesAutoresizingMaskIntoConstraints = true
 
         // 好感度ゲージ枠の幅、高さ、X座標、Y座標を取得
+        let gaugeWidth = self.gauge.frame.width
         let gaugeHeight = self.gauge.frame.height
         let gaugeXPosition = self.gauge.frame.minX
         let gaugeYPosition = self.gauge.frame.minY
         
+        // 好感度ゲージの最大長さ
+        let maxGaugeWidth = gaugeWidth - 43
+        
         // 好感度ゲージの幅を歩数を元に算出
-        var gaugeBackWidth = CGFloat(userDefaultUtil.readCatStep(catNumber: self.catNumber)) / CGFloat(CAT_EVENT_STEP) * 208
-        if (gaugeBackWidth > 208) {
-            gaugeBackWidth = 208
+        var gaugeBackWidth = CGFloat(userDefaultUtil.readCatStep(catNumber: self.catNumber)) / CGFloat(CAT_EVENT_STEP) * maxGaugeWidth
+        if (gaugeBackWidth > maxGaugeWidth) {
+            gaugeBackWidth = maxGaugeWidth
         }
         gauge_back.frame = CGRect(x: gaugeXPosition + 25, y: gaugeYPosition + 12, width: gaugeBackWidth, height: gaugeHeight - 20)
     }
