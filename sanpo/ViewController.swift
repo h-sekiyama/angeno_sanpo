@@ -16,6 +16,13 @@ class ViewController: UIViewController {
     
     let userDefaultUtil = UserDefaultUtil()
     
+    // デバッグ歩くボタン
+    @IBOutlet weak var debugWalkButton: UIButton!
+    @IBAction func debugWalk(_ sender: Any) {
+        userDefaultUtil.saveCatStep(stepCount: 10000, catNumber: "01")
+        stepCountClass.sendNotification(catName: "アンジュ", catNumber: "01")
+        userDefaultUtil.saveSanpoTotalStepCount(totalStepCount: 10000)
+    }
     // 左ボタン
     @IBOutlet weak var cursol0ImageView: UIImageView!
     @IBAction func leftTap(_ sender: Any) {
@@ -186,6 +193,14 @@ class ViewController: UIViewController {
         }
         
         stepCountClass.startStepCount(stepCountLabel: stepCount, totalStepCountLabel: totalStepCount)
+        
+        // デバッグボタン制御
+        let isDebug: String = Bundle.main.object(forInfoDictionaryKey: "DebugFlg") as! String
+        if (isDebug == "1") {
+            debugWalkButton.isHidden = false
+        } else {
+            debugWalkButton.isHidden = true
+        }
     }
 }
 

@@ -20,6 +20,8 @@
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>DebugFlg</key>
+	<string>$(DEBUG_FLG)</string>
 	<key>EndingStep</key>
 	<string>$(ENDING_STEP)</string>
 	<key>LSRequiresIPhoneOS</key>

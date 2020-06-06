@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -123,6 +123,17 @@
                                     <action selector="stopSanpo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Er6-mA-Qxp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4g8-kP-op5">
+                                <rect key="frame" x="342" y="107" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="6oT-sO-p2i"/>
+                                    <constraint firstAttribute="height" constant="30" id="xqI-nD-jCe"/>
+                                </constraints>
+                                <state key="normal" title="歩く"/>
+                                <connections>
+                                    <action selector="debugWalk:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wej-KF-jfJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.60784313725490191" green="0.87450980392156863" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -130,6 +141,7 @@
                             <constraint firstItem="dc9-eb-1Qr" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.2" id="2j0-Uf-wDC"/>
                             <constraint firstItem="Q6a-Pf-sRL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Ny-wS-6V5"/>
                             <constraint firstItem="Q6a-Pf-sRL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5qt-sK-8ty"/>
+                            <constraint firstItem="4g8-kP-op5" firstAttribute="top" secondItem="N6J-NZ-WKv" secondAttribute="bottom" constant="22.670000000000002" id="6na-xj-nQp"/>
                             <constraint firstItem="hfi-Sw-zsy" firstAttribute="leading" secondItem="dc9-eb-1Qr" secondAttribute="trailing" id="Aq5-xL-CLi"/>
                             <constraint firstItem="4WB-EX-EXM" firstAttribute="top" secondItem="0hi-rG-bX4" secondAttribute="bottom" constant="70" id="FL2-1c-BwI"/>
                             <constraint firstItem="Q6a-Pf-sRL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Jfv-SL-UQ4"/>
@@ -155,6 +167,7 @@
                             <constraint firstItem="U7p-ky-dK5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="11" id="ndz-qf-n5i"/>
                             <constraint firstItem="JCb-mh-N47" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="npf-r8-kug"/>
                             <constraint firstItem="hWP-dO-zJh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="71" id="nuq-h3-Okd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4g8-kP-op5" secondAttribute="trailing" constant="26" id="qXJ-ZC-bqF"/>
                             <constraint firstItem="hfi-Sw-zsy" firstAttribute="top" secondItem="0hi-rG-bX4" secondAttribute="bottom" constant="70" id="qb6-AI-KBS"/>
                             <constraint firstItem="0hi-rG-bX4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qqI-Cw-wOh"/>
                             <constraint firstItem="JWa-WW-nwm" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.2" id="rWE-3l-rXE"/>
@@ -173,6 +186,7 @@
                         <outlet property="cursol2ImageView" destination="JWa-WW-nwm" id="mg1-Fh-IOv"/>
                         <outlet property="cursol3ImageView" destination="gPi-d5-ng3" id="xXz-xJ-Oyr"/>
                         <outlet property="cursol4ImageView" destination="4WB-EX-EXM" id="Jzr-Hr-NgR"/>
+                        <outlet property="debugWalkButton" destination="4g8-kP-op5" id="ejR-SO-33X"/>
                         <outlet property="stepCount" destination="hWP-dO-zJh" id="smn-Dz-zvF"/>
                         <outlet property="totalStepCount" destination="N6J-NZ-WKv" id="flS-3J-6sw"/>
                     </connections>
